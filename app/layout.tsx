@@ -3,20 +3,20 @@ import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansJP = Noto_Sans_JP({ 
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: '--font-sans',
   weight: ['400', '500', '700']
 });
 
-const notoSerifJP = Noto_Serif_JP({ 
+const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
   variable: '--font-serif',
   weight: ['400', '600', '700']
 });
 
 export const metadata: Metadata = {
-  title: '2年D組 離任記念特設サイト - 感謝を込めて',
+  title: '2年D組 先生へのメッセージ',
   description: '佐土原高校 情報技術科 2年D組より、甲斐先生・木下先生への感謝のメッセージ',
   generator: 'v0.app',
   icons: {
