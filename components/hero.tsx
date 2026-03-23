@@ -29,7 +29,7 @@ export function Hero() {
         >
           甲斐先生・木下先生
           <br className="md:hidden" />
-          <span className="block mt-2">2年間ありがとうございました</span>
+          <span className="block mt-2">これまでありがとうございました</span>
         </motion.h1>
 
         <motion.p
