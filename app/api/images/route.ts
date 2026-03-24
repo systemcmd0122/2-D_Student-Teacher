@@ -20,7 +20,10 @@ export async function GET(request: Request) {
 
     try {
         const folderPath = join(process.cwd(), 'public', teacher)
+        console.log('Reading from:', folderPath)
+
         const files = readdirSync(folderPath)
+        console.log('Files found:', files)
 
         // 画像ファイルのみをフィルタリング（拡張子で判定）
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp']
@@ -35,18 +38,20 @@ export async function GET(request: Request) {
             // ファイル名から拡張子を除去
             const nameWithoutExt = file.substring(0, file.lastIndexOf('.'))
 
-            // 「生徒名_数字」のパターンをチェック
+            // 末尾の_数字パターンをチェック（複数枚の画像用）
             const match = nameWithoutExt.match(/^(.+?)(_\d+)?$/)
-            const studentName = match ? match[1] : nameWithoutExt
+            if (!match) {
+                console.warn(`Cannot parse filename: ${file}`)
+                return
+            }
 
-            // 生徒名がメインの名前から末尾の_数字を除いたもの
-            const cleanedName = studentName.replace(/_\d+$/, '')
+            const studentName = match[1].trim() // 先頭後尾の空白を削除
 
             // 生徒名でグループ化
-            if (!studentMap.has(cleanedName)) {
-                studentMap.set(cleanedName, [])
+            if (!studentMap.has(studentName)) {
+                studentMap.set(studentName, [])
             }
-            studentMap.get(cleanedName)!.push(`/${teacher}/${file}`)
+            studentMap.get(studentName)!.push(`/${teacher}/${encodeURI(file)}`)
         })
 
         // studentData に変換
@@ -59,8 +64,9 @@ export async function GET(request: Request) {
 
         return NextResponse.json(studentData)
     } catch (error) {
+        console.error('Image API Error:', error)
         return NextResponse.json(
-            { error: 'フォルダの読み込みに失敗しました' },
+            { error: 'フォルダの読み込みに失敗しました', details: error instanceof Error ? error.message : String(error) },
             { status: 500 }
         )
     }
