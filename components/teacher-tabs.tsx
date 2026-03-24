@@ -28,12 +28,13 @@ export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps
         )}
 
         {/* Hover effect background */}
-        <motion.div
-          className="absolute inset-0 rounded-full bg-accent/50 -z-10 opacity-0"
-          animate={{ opacity: activeTeacher !== "kai" ? 0 : 0 }}
-          whileHover={{ opacity: activeTeacher !== "kai" ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        />
+        {activeTeacher !== "kai" && (
+          <motion.div
+            className="absolute inset-0 rounded-full bg-accent/50 -z-10 opacity-0"
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        )}
 
         <motion.div
           animate={{ scale: activeTeacher === "kai" ? 1.2 : 1 }}
@@ -43,8 +44,8 @@ export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps
         </motion.div>
 
         <span className={`font-semibold text-sm md:text-base transition-colors ${activeTeacher === "kai"
-            ? "text-primary-foreground"
-            : "text-card-foreground hover:text-foreground"
+          ? "text-primary-foreground"
+          : "text-card-foreground hover:text-foreground"
           }`}>
           甲斐一成 先生
         </span>
@@ -76,12 +77,13 @@ export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps
         )}
 
         {/* Hover effect background */}
-        <motion.div
-          className="absolute inset-0 rounded-full bg-accent/50 -z-10 opacity-0"
-          animate={{ opacity: activeTeacher !== "kisita" ? 0 : 0 }}
-          whileHover={{ opacity: activeTeacher !== "kisita" ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        />
+        {activeTeacher !== "kisita" && (
+          <motion.div
+            className="absolute inset-0 rounded-full bg-accent/50 -z-10 opacity-0"
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        )}
 
         <motion.div
           animate={{ scale: activeTeacher === "kisita" ? 1.2 : 1 }}
@@ -91,8 +93,8 @@ export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps
         </motion.div>
 
         <span className={`font-semibold text-sm md:text-base transition-colors ${activeTeacher === "kisita"
-            ? "text-primary-foreground"
-            : "text-card-foreground hover:text-foreground"
+          ? "text-primary-foreground"
+          : "text-card-foreground hover:text-foreground"
           }`}>
           木下恵里加 先生
         </span>

@@ -133,7 +133,7 @@ export function MessageCard({ card, index, onImageClick }: MessageCardProps) {
           {hasMultipleImages && (
             <motion.div
               className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-15"
-              animate={{ opacity: isHovered ? 1 : 0.6 }}
+              animate={{ opacity: isHovered ? 1 : 0.5 }}
               transition={{ duration: 0.3 }}
             >
               {card.images.map((_, i) => (

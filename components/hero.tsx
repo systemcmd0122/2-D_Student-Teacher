@@ -129,21 +129,21 @@ export function Hero() {
           className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto origin-center"
         />
 
-        {/* Floating accent elements */}
-        <div className="absolute top-10 left-5 md:left-10 opacity-0 md:opacity-100">
+        {/* Floating accent elements - Desktop only */}
+        <div className="hidden md:block absolute top-10 left-5 md:left-10">
           <motion.div
             animate={{ y: [0, -10, 0], rotate: [0, 360] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="text-primary/30 text-2xl"
+            className="text-primary/20 text-2xl"
           >
             ✨
           </motion.div>
         </div>
-        <div className="absolute bottom-20 right-5 md:right-10 opacity-0 md:opacity-100">
+        <div className="hidden md:block absolute bottom-20 right-5 md:right-10">
           <motion.div
             animate={{ y: [0, 10, 0], rotate: [360, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="text-primary/30 text-2xl"
+            className="text-primary/20 text-2xl"
           >
             ✨
           </motion.div>
