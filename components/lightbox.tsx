@@ -13,19 +13,16 @@ interface LightboxProps {
 
 export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
-  const [direction, setDirection] = useState(0)
 
   useEffect(() => {
     setCurrentIndex(initialIndex)
   }, [initialIndex])
 
   const goToPrev = useCallback(() => {
-    setDirection(-1)
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }, [images.length])
 
   const goToNext = useCallback(() => {
-    setDirection(1)
     setCurrentIndex((prev) => (prev + 1) % images.length)
   }, [images.length])
 
@@ -61,32 +58,15 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
     goToNext()
   }
 
-  const imageVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-  }
-
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       {images.length > 0 && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/85 backdrop-blur-md p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/80 backdrop-blur-sm p-4"
           onClick={onClose}
         >
           {/* Close Button */}
@@ -94,9 +74,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 bg-card/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-primary transition-colors z-50"
+            className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors z-50"
             onClick={onClose}
             aria-label="閉じる"
           >
@@ -109,61 +87,39 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-3xl max-h-[90vh] aspect-square flex items-center justify-center"
+            className="relative w-full max-w-2xl max-h-[90vh] aspect-square flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Image with Slide Animation */}
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={currentIndex}
-                custom={direction}
-                variants={imageVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.3 },
-                }}
-                className="relative w-full h-full"
-              >
-                <Image
-                  src={images[currentIndex]}
-                  alt="メッセージカード"
-                  fill
-                  className="object-contain rounded-xl shadow-2xl"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 512px"
-                  priority
-                  quality={95}
-                />
-              </motion.div>
-            </AnimatePresence>
+            {/* Image */}
+            <div className="relative w-full h-full">
+              <Image
+                src={images[currentIndex]}
+                alt="メッセージカード"
+                fill
+                className="object-contain rounded-lg"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 512px"
+                priority
+                quality={95}
+              />
+            </div>
 
             {/* Navigation Buttons - Outside Image */}
             {images.length > 1 && (
               <>
                 <motion.button
                   onClick={handlePrev}
-                  className="absolute -left-20 md:-left-24 top-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 bg-card/80 hover:bg-primary backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl transition-colors duration-200"
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.9 }}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ delay: 0.2 }}
+                  className="absolute -left-20 md:-left-24 top-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 bg-card/90 hover:bg-primary backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transition-colors duration-200"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   aria-label="前の画像"
                 >
                   <ChevronLeft className="w-7 h-7 md:w-8 md:h-8 text-foreground" />
                 </motion.button>
                 <motion.button
                   onClick={handleNext}
-                  className="absolute -right-20 md:-right-24 top-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 bg-card/80 hover:bg-primary backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl transition-colors duration-200"
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.9 }}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ delay: 0.2 }}
+                  className="absolute -right-20 md:-right-24 top-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 bg-card/90 hover:bg-primary backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transition-colors duration-200"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   aria-label="次の画像"
                 >
                   <ChevronRight className="w-7 h-7 md:w-8 md:h-8 text-foreground" />
@@ -181,12 +137,11 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
                       key={i}
                       onClick={(e) => {
                         e.stopPropagation()
-                        setDirection(i > currentIndex ? 1 : -1)
                         setCurrentIndex(i)
                       }}
-                      className={`h-2 rounded-full transition-all cursor-pointer ${i === currentIndex ? "bg-primary" : "bg-card/60 hover:bg-card/80"
+                      className={`h-2 rounded-full transition-all cursor-pointer ${i === currentIndex ? "bg-primary w-8" : "bg-card/60 w-2 hover:bg-card/80"
                         }`}
-                      whileHover={{ scale: 1.3 }}
+                      whileHover={{ scale: 1.2 }}
                       initial={false}
                       animate={{ width: i === currentIndex ? 32 : 8 }}
                       aria-label={`${i + 1}枚目の画像に移動`}
@@ -196,7 +151,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
 
                 {/* Image Counter */}
                 <motion.div
-                  className="absolute -top-12 left-1/2 -translate-x-1/2 text-sm text-card drop-shadow-lg font-medium"
+                  className="absolute -top-12 left-1/2 -translate-x-1/2 text-sm text-card/80"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.1 }}
