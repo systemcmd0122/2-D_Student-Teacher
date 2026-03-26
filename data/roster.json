@@ -1,0 +1,326 @@
+[
+    {
+        "no": 1,
+        "surname": "安達",
+        "name": "太陽",
+        "surnameFurigana": "あだち",
+        "nameFurigana": "たいよう",
+        "fullName": "安達　太陽",
+        "fullFurigana": "あだち　たいよう"
+    },
+    {
+        "no": 2,
+        "surname": "有村",
+        "name": "涼雅",
+        "surnameFurigana": "ありむら",
+        "nameFurigana": "りょうが",
+        "fullName": "有村　涼雅",
+        "fullFurigana": "ありむら　りょうが"
+    },
+    {
+        "no": 3,
+        "surname": "石井",
+        "name": "貴哉",
+        "surnameFurigana": "いしい",
+        "nameFurigana": "たかや",
+        "fullName": "石井　貴哉",
+        "fullFurigana": "いしい　たかや"
+    },
+    {
+        "no": 4,
+        "surname": "岩田",
+        "name": "康孝",
+        "surnameFurigana": "いわた",
+        "nameFurigana": "やすたか",
+        "fullName": "岩田　康孝",
+        "fullFurigana": "いわた　やすたか"
+    },
+    {
+        "no": 5,
+        "surname": "内田",
+        "name": "有喜亜",
+        "surnameFurigana": "うちだ",
+        "nameFurigana": "ゆきあ",
+        "fullName": "内田　有喜亜",
+        "fullFurigana": "うちだ　ゆきあ"
+    },
+    {
+        "no": 6,
+        "surname": "甲斐",
+        "name": "黄純",
+        "surnameFurigana": "かい",
+        "nameFurigana": "きすみ",
+        "fullName": "甲斐　黄純",
+        "fullFurigana": "かい　きすみ"
+    },
+    {
+        "no": 7,
+        "surname": "甲斐",
+        "name": "琉捺",
+        "surnameFurigana": "かい",
+        "nameFurigana": "るな",
+        "fullName": "甲斐　琉捺",
+        "fullFurigana": "かい　るな"
+    },
+    {
+        "no": 8,
+        "surname": "加世田",
+        "name": "湊",
+        "surnameFurigana": "かせだ",
+        "nameFurigana": "みずき",
+        "fullName": "加世田　湊",
+        "fullFurigana": "かせだ　みずき"
+    },
+    {
+        "no": 9,
+        "surname": "加藤",
+        "name": "希空丸",
+        "surnameFurigana": "かとう",
+        "nameFurigana": "きくまる",
+        "fullName": "加藤　希空丸",
+        "fullFurigana": "かとう　きくまる"
+    },
+    {
+        "no": 10,
+        "surname": "河野",
+        "name": "天智",
+        "surnameFurigana": "かわの",
+        "nameFurigana": "てんち",
+        "fullName": "河野　天智",
+        "fullFurigana": "かわの　てんち"
+    },
+    {
+        "no": 11,
+        "surname": "木浦",
+        "name": "翔太",
+        "surnameFurigana": "きうら",
+        "nameFurigana": "しょうた",
+        "fullName": "木浦　翔太",
+        "fullFurigana": "きうら　しょうた"
+    },
+    {
+        "no": 12,
+        "surname": "黒木",
+        "name": "碧",
+        "surnameFurigana": "くろき",
+        "nameFurigana": "あおい",
+        "fullName": "黒木　碧",
+        "fullFurigana": "くろき　あおい"
+    },
+    {
+        "no": 13,
+        "surname": "黒木",
+        "name": "瑛汰",
+        "surnameFurigana": "くろき",
+        "nameFurigana": "えいた",
+        "fullName": "黒木　瑛汰",
+        "fullFurigana": "くろき　えいた"
+    },
+    {
+        "no": 14,
+        "surname": "塩月",
+        "name": "瑠衣",
+        "surnameFurigana": "しおつき",
+        "nameFurigana": "るい",
+        "fullName": "塩月　瑠衣",
+        "fullFurigana": "しおつき　るい"
+    },
+    {
+        "no": 15,
+        "surname": "圖師",
+        "name": "陽杜",
+        "surnameFurigana": "ずし",
+        "nameFurigana": "はると",
+        "fullName": "圖師　陽杜",
+        "fullFurigana": "ずし　はると"
+    },
+    {
+        "no": 16,
+        "surname": "曾我部",
+        "name": "哲平",
+        "surnameFurigana": "そがべ",
+        "nameFurigana": "てっぺい",
+        "fullName": "曾我部　哲平",
+        "fullFurigana": "そがべ　てっぺい"
+    },
+    {
+        "no": 17,
+        "surname": "染川",
+        "name": "凛",
+        "surnameFurigana": "そめかわ",
+        "nameFurigana": "りん",
+        "fullName": "染川　凛",
+        "fullFurigana": "そめかわ　りん"
+    },
+    {
+        "no": 18,
+        "surname": "高山",
+        "name": "莞寧",
+        "surnameFurigana": "たかやま",
+        "nameFurigana": "かんねい",
+        "fullName": "高山　莞寧",
+        "fullFurigana": "たかやま　かんねい"
+    },
+    {
+        "no": 19,
+        "surname": "田口",
+        "name": "瑞姫",
+        "surnameFurigana": "たぐち",
+        "nameFurigana": "ひな",
+        "fullName": "田口　瑞姫",
+        "fullFurigana": "たぐち　ひな"
+    },
+    {
+        "no": 20,
+        "surname": "竹乃内",
+        "name": "隼翔",
+        "surnameFurigana": "たけのうち",
+        "nameFurigana": "はやと",
+        "fullName": "竹乃内　隼翔",
+        "fullFurigana": "たけのうち　はやと"
+    },
+    {
+        "no": 21,
+        "surname": "谷口",
+        "name": "夢生",
+        "surnameFurigana": "たにぐち",
+        "nameFurigana": "むう",
+        "fullName": "谷口　夢生",
+        "fullFurigana": "たにぐち　むう"
+    },
+    {
+        "no": 22,
+        "surname": "築池",
+        "name": "康平",
+        "surnameFurigana": "つきじ",
+        "nameFurigana": "こうへい",
+        "fullName": "築池　康平",
+        "fullFurigana": "つきじ　こうへい"
+    },
+    {
+        "no": 23,
+        "surname": "寺岡",
+        "name": "賢甫",
+        "surnameFurigana": "てらおか",
+        "nameFurigana": "けんすけ",
+        "fullName": "寺岡　賢甫",
+        "fullFurigana": "てらおか　けんすけ"
+    },
+    {
+        "no": 24,
+        "surname": "冨永",
+        "name": "拓矢",
+        "surnameFurigana": "とみなが",
+        "nameFurigana": "たくや",
+        "fullName": "冨永　拓矢",
+        "fullFurigana": "とみなが　たくや"
+    },
+    {
+        "no": 25,
+        "surname": "冨永",
+        "name": "望叶",
+        "surnameFurigana": "とみなが",
+        "nameFurigana": "のか",
+        "fullName": "冨永　望叶",
+        "fullFurigana": "とみなが　のか"
+    },
+    {
+        "no": 26,
+        "surname": "中田",
+        "name": "凜",
+        "surnameFurigana": "なかた",
+        "nameFurigana": "りん",
+        "fullName": "中田　凜",
+        "fullFurigana": "なかた　りん"
+    },
+    {
+        "no": 27,
+        "surname": "永野",
+        "name": "乃愛",
+        "surnameFurigana": "ながの",
+        "nameFurigana": "のあ",
+        "fullName": "永野　乃愛",
+        "fullFurigana": "ながの　のあ"
+    },
+    {
+        "no": 28,
+        "surname": "西田",
+        "name": "頼寿",
+        "surnameFurigana": "にしだ",
+        "nameFurigana": "よりひさ",
+        "fullName": "西田　頼寿",
+        "fullFurigana": "にしだ　よりひさ"
+    },
+    {
+        "no": 29,
+        "surname": "日高",
+        "name": "琥太",
+        "surnameFurigana": "ひだか",
+        "nameFurigana": "こうた",
+        "fullName": "日高　琥太",
+        "fullFurigana": "ひだか　こうた"
+    },
+    {
+        "no": 30,
+        "surname": "星崎",
+        "name": "桜史",
+        "surnameFurigana": "ほしざき",
+        "nameFurigana": "おうし",
+        "fullName": "星崎　桜史",
+        "fullFurigana": "ほしざき　おうし"
+    },
+    {
+        "no": 31,
+        "surname": "前原",
+        "name": "漸佑",
+        "surnameFurigana": "まえはら",
+        "nameFurigana": "ぜんすけ",
+        "fullName": "前原　漸佑",
+        "fullFurigana": "まえはら　ぜんすけ"
+    },
+    {
+        "no": 32,
+        "surname": "松尾",
+        "name": "紀香",
+        "surnameFurigana": "まつお",
+        "nameFurigana": "のりか",
+        "fullName": "松尾　紀香",
+        "fullFurigana": "まつお　のりか"
+    },
+    {
+        "no": 33,
+        "surname": "的場",
+        "name": "勇都",
+        "surnameFurigana": "まとば",
+        "nameFurigana": "ゆうと",
+        "fullName": "的場　勇都",
+        "fullFurigana": "まとば　ゆうと"
+    },
+    {
+        "no": 34,
+        "surname": "盛田",
+        "name": "可夢偉",
+        "surnameFurigana": "もりた",
+        "nameFurigana": "かむい",
+        "fullName": "盛田　可夢偉",
+        "fullFurigana": "もりた　かむい"
+    },
+    {
+        "no": 35,
+        "surname": "山内",
+        "name": "侑大",
+        "surnameFurigana": "やまうち",
+        "nameFurigana": "ゆうだい",
+        "fullName": "山内　侑大",
+        "fullFurigana": "やまうち　ゆうだい"
+    },
+    {
+        "no": 36,
+        "surname": "山本",
+        "name": "泰綺",
+        "surnameFurigana": "やまもと",
+        "nameFurigana": "たいき",
+        "fullName": "山本　泰綺",
+        "fullFurigana": "やまもと　たいき"
+    }
+]

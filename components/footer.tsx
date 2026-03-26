@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -12,6 +13,25 @@ export function Footer() {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mx-auto text-center px-4 md:px-6"
       >
+        {/* Navigation Links */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-8 pb-8 border-b border-pink-100">
+          <div className="flex items-center gap-4 md:gap-8">
+            <Link
+              href="/"
+              className="text-sm md:text-base font-medium text-gray-700 hover:text-pink-600 transition-colors"
+            >
+              メッセージ
+            </Link>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <Link
+              href="/roster"
+              className="text-sm md:text-base font-medium text-gray-700 hover:text-pink-600 transition-colors"
+            >
+              クラス名簿
+            </Link>
+          </div>
+        </div>
+
         {/* Main Message */}
         <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground mb-6 text-balance leading-relaxed">
           先生方の新天地でのご活躍をお祈りしています。
