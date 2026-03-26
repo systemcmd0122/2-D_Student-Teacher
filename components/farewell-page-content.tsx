@@ -82,14 +82,14 @@ function FarewellPageContent() {
                 {!studentName && <Hero />}
 
                 {/* Main Content */}
-                <section className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pb-8">
+                <section className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
                     {/* Student Filter Header */}
                     {studentName && (
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="mb-8 pt-8"
+                            className="mb-8 md:mb-12 pt-4 md:pt-8"
                         >
                             <div className="bg-white rounded-lg p-6 border border-pink-100 shadow-sm">
                                 <Link href="/roster" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 mb-3 transition-colors">
@@ -109,8 +109,10 @@ function FarewellPageContent() {
                     {/* Main Content Display */}
                     {!loading && (
                         <>
-                            <div className="mt-8">
-                                <TeacherTabs activeTeacher={activeTeacher} onTeacherChange={setActiveTeacher} />
+                            <div className="space-y-8 md:space-y-10">
+                                <div className="space-y-6 md:space-y-8">
+                                    <TeacherTabs activeTeacher={activeTeacher} onTeacherChange={setActiveTeacher} />
+                                </div>
                                 <MessageGallery
                                     cards={displayCards}
                                     activeTeacher={activeTeacher}
@@ -119,11 +121,13 @@ function FarewellPageContent() {
                             </div>
 
                             {/* Lightbox Component */}
-                            <Lightbox
-                                images={lightboxImages}
-                                initialIndex={lightboxStartIndex}
-                                onClose={() => setLightboxImages([])}
-                            />
+                            {lightboxImages.length > 0 && (
+                                <Lightbox
+                                    images={lightboxImages}
+                                    initialIndex={lightboxStartIndex}
+                                    onClose={() => setLightboxImages([])}
+                                />
+                            )}
                         </>
                     )}
                 </section>

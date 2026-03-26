@@ -10,7 +10,7 @@ interface TeacherTabsProps {
 
 export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps) {
   return (
-    <div className="flex justify-center gap-4 md:gap-6">
+    <div className="flex justify-center gap-4 md:gap-6 pb-8 md:pb-10">
       <button
         onClick={() => onTeacherChange("kai")}
         className={`relative px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 flex items-center gap-2 ${activeTeacher === "kai"
