@@ -208,6 +208,15 @@
     },
     {
         "no": 24,
+        "surname": "德田",
+        "name": "太祐",
+        "surnameFurigana": "とくだ",
+        "nameFurigana": "たいすけ",
+        "fullName": "德田　太祐",
+        "fullFurigana": "とくだ　たいすけ"
+    },
+    {
+        "no": 25,
         "surname": "冨永",
         "name": "拓矢",
         "surnameFurigana": "とみなが",
@@ -216,7 +225,7 @@
         "fullFurigana": "とみなが　たくや"
     },
     {
-        "no": 25,
+        "no": 26,
         "surname": "冨永",
         "name": "望叶",
         "surnameFurigana": "とみなが",
@@ -225,7 +234,7 @@
         "fullFurigana": "とみなが　のか"
     },
     {
-        "no": 26,
+        "no": 27,
         "surname": "中田",
         "name": "凜",
         "surnameFurigana": "なかた",
@@ -234,7 +243,7 @@
         "fullFurigana": "なかた　りん"
     },
     {
-        "no": 27,
+        "no": 28,
         "surname": "永野",
         "name": "乃愛",
         "surnameFurigana": "ながの",
@@ -243,7 +252,7 @@
         "fullFurigana": "ながの　のあ"
     },
     {
-        "no": 28,
+        "no": 29,
         "surname": "西田",
         "name": "頼寿",
         "surnameFurigana": "にしだ",
@@ -252,7 +261,7 @@
         "fullFurigana": "にしだ　よりひさ"
     },
     {
-        "no": 29,
+        "no": 30,
         "surname": "日高",
         "name": "琥太",
         "surnameFurigana": "ひだか",
@@ -261,7 +270,7 @@
         "fullFurigana": "ひだか　こうた"
     },
     {
-        "no": 30,
+        "no": 31,
         "surname": "星崎",
         "name": "桜史",
         "surnameFurigana": "ほしざき",
@@ -270,7 +279,7 @@
         "fullFurigana": "ほしざき　おうし"
     },
     {
-        "no": 31,
+        "no": 32,
         "surname": "前原",
         "name": "漸佑",
         "surnameFurigana": "まえはら",
@@ -279,7 +288,7 @@
         "fullFurigana": "まえはら　ぜんすけ"
     },
     {
-        "no": 32,
+        "no": 33,
         "surname": "松尾",
         "name": "紀香",
         "surnameFurigana": "まつお",
@@ -288,7 +297,7 @@
         "fullFurigana": "まつお　のりか"
     },
     {
-        "no": 33,
+        "no": 34,
         "surname": "的場",
         "name": "勇都",
         "surnameFurigana": "まとば",
@@ -297,7 +306,7 @@
         "fullFurigana": "まとば　ゆうと"
     },
     {
-        "no": 34,
+        "no": 35,
         "surname": "盛田",
         "name": "可夢偉",
         "surnameFurigana": "もりた",
@@ -306,7 +315,7 @@
         "fullFurigana": "もりた　かむい"
     },
     {
-        "no": 35,
+        "no": 36,
         "surname": "山内",
         "name": "侑大",
         "surnameFurigana": "やまうち",
@@ -315,7 +324,7 @@
         "fullFurigana": "やまうち　ゆうだい"
     },
     {
-        "no": 36,
+        "no": 37,
         "surname": "山本",
         "name": "泰綺",
         "surnameFurigana": "やまもと",

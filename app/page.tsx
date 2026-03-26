@@ -9,6 +9,7 @@ import { SakuraPetals } from "@/components/sakura-petals"
 import { Hero } from "@/components/hero"
 import { TeacherTabs } from "@/components/teacher-tabs"
 import { MessageGallery } from "@/components/message-gallery"
+import { AlbumLoadingScreen } from "@/components/album-loading"
 import { Lightbox } from "@/components/lightbox"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -91,12 +92,12 @@ export default function FarewellTributePage() {
               className="mb-8 pt-8"
             >
               <div className="bg-white rounded-lg p-6 border border-pink-100 shadow-sm">
-                <Link href="/" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 mb-3 transition-colors">
+                <Link href="/roster" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 mb-3 transition-colors">
                   <X className="w-4 h-4" />
                   <span className="text-sm">戻る</span>
                 </Link>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                  {studentName}へのメッセージ
+                  {studentName}からのメッセージ
                 </h2>
               </div>
             </motion.div>
@@ -114,31 +115,7 @@ export default function FarewellTributePage() {
 
           {/* Message Gallery */}
           {loading ? (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="py-20 md:py-32 flex flex-col items-center justify-center gap-6"
-            >
-              {/* Animated loading circles */}
-              <div className="flex gap-3">
-                {[0, 1, 2].map((i) => (
-                  <motion.div
-                    key={i}
-                    className="w-3 h-3 rounded-full bg-primary"
-                    animate={{ scale: [1, 1.2, 1], opacity: [0.6, 1, 0.6] }}
-                    transition={{
-                      duration: 1.5,
-                      delay: i * 0.2,
-                      repeat: Infinity,
-                    }}
-                  />
-                ))}
-              </div>
-              <p className="text-muted-foreground text-base md:text-lg">
-                メッセージを読み込み中...
-              </p>
-            </motion.div>
+            <AlbumLoadingScreen />
           ) : displayCards.length > 0 ? (
             <MessageGallery
               cards={displayCards}
@@ -153,10 +130,10 @@ export default function FarewellTributePage() {
               className="py-20 md:py-32 flex flex-col items-center justify-center gap-6"
             >
               <p className="text-muted-foreground text-lg md:text-xl">
-                {studentName ? `${studentName}さんへのメッセージはまだありません` : 'メッセージがありません'}
+                {studentName ? `${studentName}さんからのメッセージはまだありません` : 'メッセージがありません'}
               </p>
               {studentName && (
-                <Link href="/">
+                <Link href="/roster">
                   <Button>クラス名簿に戻る</Button>
                 </Link>
               )}

@@ -73,22 +73,20 @@ export default function RosterPage() {
 
                     {/* List View */}
                     <TabsContent value="list" className="mt-6">
-                        <div className="space-y-2">
+                        <div className="space-y-5">
                             {filteredStudents.length > 0 ? (
                                 filteredStudents.map((student) => (
                                     <Link key={student.no} href={`/?student=${encodeURIComponent(student.fullName)}`}>
-                                        <Card className="p-4 hover:bg-pink-50 transition-colors cursor-pointer">
-                                            <div className="flex items-center justify-between mb-2">
-                                                <div className="flex items-center gap-4 flex-1">
-                                                    <Badge variant="outline" className="minw-fit">
-                                                        No.{student.no}
-                                                    </Badge>
-                                                    <div>
-                                                        <h3 className="font-semibold text-lg text-gray-800">
-                                                            {student.fullName}
-                                                        </h3>
-                                                        <p className="text-sm text-gray-500">{student.fullFurigana}</p>
-                                                    </div>
+                                        <Card className="p-5 hover:bg-pink-50 transition-colors cursor-pointer border-l-4 border-l-pink-300 shadow-md hover:shadow-lg">
+                                            <div className="flex items-center gap-4">
+                                                <Badge variant="outline" className="min-w-fit flex-shrink-0">
+                                                    No.{student.no}
+                                                </Badge>
+                                                <div className="flex-1 min-w-0">
+                                                    <h3 className="font-semibold text-lg text-gray-800 truncate">
+                                                        {student.fullName}
+                                                    </h3>
+                                                    <p className="text-sm text-gray-500 truncate">{student.fullFurigana}</p>
                                                 </div>
                                             </div>
                                         </Card>
@@ -128,28 +126,28 @@ export default function RosterPage() {
                     </TabsContent>
                 </Tabs>
 
-                {/* Details Table (Optional) */}
-                {filteredStudents.length > 0 && filteredStudents.length <= 10 && (
-                    <div className="mt-8 bg-white rounded-lg border">
+                {/* Details Table */}
+                {filteredStudents.length > 0 && (
+                    <div className="mt-8 bg-white rounded-lg border overflow-x-auto">
                         <table className="w-full text-sm">
-                            <thead className="border-b bg-gray-50">
+                            <thead className="border-b bg-gray-50 sticky top-0">
                                 <tr>
-                                    <th className="px-4 py-3 text-left font-semibold">No.</th>
-                                    <th className="px-4 py-3 text-left font-semibold">姓</th>
-                                    <th className="px-4 py-3 text-left font-semibold">名</th>
-                                    <th className="px-4 py-3 text-left font-semibold">ふりがな</th>
+                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">No.</th>
+                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">姓</th>
+                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">名</th>
+                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">ふりがな</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {filteredStudents.map((student) => (
                                     <tr
                                         key={student.no}
-                                        className="border-b hover:bg-pink-50 cursor-pointer"
+                                        className="border-b hover:bg-pink-50 cursor-pointer transition-colors"
                                         onClick={() => {
                                             window.location.href = `/?student=${encodeURIComponent(student.fullName)}`
                                         }}
                                     >
-                                        <td className="px-4 py-3 text-gray-800">{student.no}</td>
+                                        <td className="px-4 py-3 text-gray-800 font-medium">{student.no}</td>
                                         <td className="px-4 py-3 font-semibold">{student.surname}</td>
                                         <td className="px-4 py-3 font-semibold">{student.name}</td>
                                         <td className="px-4 py-3 text-gray-600">
