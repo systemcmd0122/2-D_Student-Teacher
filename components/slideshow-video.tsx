@@ -8,13 +8,15 @@ export function SlideshowVideo() {
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [isBuffering, setIsBuffering] = useState(false)
+    const [loadProgress, setLoadProgress] = useState(0)
     const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
         const video = videoRef.current
         if (!video) return
 
-        const handleCanPlay = () => {
+        // 全バッファ完了後にローディング終了
+        const handleCanPlayThrough = () => {
             setIsLoading(false)
             setIsBuffering(false)
         }
@@ -35,20 +37,32 @@ export function SlideshowVideo() {
 
         const handleLoadStart = () => {
             setIsLoading(true)
+            setLoadProgress(0)
         }
 
-        video.addEventListener("canplay", handleCanPlay)
+        // ダウンロード進捗を表示
+        const handleProgress = () => {
+            if (video.buffered.length > 0 && video.duration) {
+                const bufferedEnd = video.buffered.end(video.buffered.length - 1)
+                const progress = Math.round((bufferedEnd / video.duration) * 100)
+                setLoadProgress(progress)
+            }
+        }
+
+        video.addEventListener("canplaythrough", handleCanPlayThrough)
         video.addEventListener("waiting", handleWaiting)
         video.addEventListener("playing", handlePlaying)
         video.addEventListener("error", handleError)
         video.addEventListener("loadstart", handleLoadStart)
+        video.addEventListener("progress", handleProgress)
 
         return () => {
-            video.removeEventListener("canplay", handleCanPlay)
+            video.removeEventListener("canplaythrough", handleCanPlayThrough)
             video.removeEventListener("waiting", handleWaiting)
             video.removeEventListener("playing", handlePlaying)
             video.removeEventListener("error", handleError)
             video.removeEventListener("loadstart", handleLoadStart)
+            video.removeEventListener("progress", handleProgress)
         }
     }, [])
 
@@ -71,9 +85,20 @@ export function SlideshowVideo() {
                             exit={{ opacity: 0 }}
                             className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm z-10"
                         >
-                            <div className="text-center">
+                            <div className="text-center w-64">
                                 <Spinner className="w-12 h-12 mx-auto mb-4 text-white" />
-                                <p className="text-white text-sm md:text-base">動画を読み込み中...</p>
+                                <p className="text-white text-sm md:text-base mb-3">
+                                    動画を読み込み中... {loadProgress}%
+                                </p>
+                                {/* プログレスバー */}
+                                <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                                    <motion.div
+                                        className="h-full bg-pink-400 rounded-full"
+                                        initial={{ width: 0 }}
+                                        animate={{ width: `${loadProgress}%` }}
+                                        transition={{ ease: "linear" }}
+                                    />
+                                </div>
                             </div>
                         </motion.div>
                     )}
@@ -111,7 +136,7 @@ export function SlideshowVideo() {
                         ref={videoRef}
                         src="/api/video"
                         controls
-                        preload="metadata"
+                        preload="auto"
                         className="w-full h-full"
                         controlsList="nodownload"
                     >
