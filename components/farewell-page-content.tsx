@@ -117,6 +117,7 @@ function FarewellPageContent() {
                                     cards={displayCards}
                                     activeTeacher={activeTeacher}
                                     onImageClick={handleImageClick}
+                                    isDetailView={!!studentName}
                                 />
                             </div>
 

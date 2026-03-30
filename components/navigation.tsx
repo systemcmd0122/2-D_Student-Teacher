@@ -1,15 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
 
     const navItems = [
         { label: "メッセージ", href: "/" },
+        { label: "思い出の動画", href: "/video" },
         { label: "クラス名簿", href: "/roster" },
     ]
 
@@ -42,8 +48,9 @@ export function Navigation() {
                     <button
                         className="md:hidden p-2"
                         onClick={() => setIsOpen(!isOpen)}
+                        aria-label="メニュー"
                     >
-                        {isOpen ? (
+                        {isMounted && isOpen ? (
                             <X className="w-6 h-6 text-gray-700" />
                         ) : (
                             <Menu className="w-6 h-6 text-gray-700" />
@@ -52,7 +59,7 @@ export function Navigation() {
                 </div>
 
                 {/* Mobile Navigation */}
-                {isOpen && (
+                {isMounted && isOpen && (
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}

@@ -6,7 +6,6 @@ import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import roster from "@/data/roster.json"
 
 interface Student {
@@ -21,7 +20,6 @@ interface Student {
 
 export default function RosterPage() {
     const [searchQuery, setSearchQuery] = useState("")
-    const [viewMode, setViewMode] = useState<"list" | "grid">("list")
 
     const filteredStudents = useMemo(() => {
         return (roster as Student[]).filter((student) => {
@@ -65,100 +63,28 @@ export default function RosterPage() {
                 </div>
 
                 {/* View Mode Tabs */}
-                <Tabs value={viewMode} onValueChange={(v) => setViewMode(v as "list" | "grid")} className="mb-6">
-                    <TabsList>
-                        <TabsTrigger value="list">リスト表示</TabsTrigger>
-                        <TabsTrigger value="grid">グリッド表示</TabsTrigger>
-                    </TabsList>
-
-                    {/* List View */}
-                    <TabsContent value="list" className="mt-6">
-                        <div className="space-y-5">
-                            {filteredStudents.length > 0 ? (
-                                filteredStudents.map((student) => (
-                                    <Link key={student.no} href={`/?student=${encodeURIComponent(student.fullName)}`}>
-                                        <Card className="p-5 hover:bg-pink-50 transition-colors cursor-pointer border-l-4 border-l-pink-300 shadow-md hover:shadow-lg">
-                                            <div className="flex items-center gap-4">
-                                                <Badge variant="outline" className="min-w-fit flex-shrink-0">
-                                                    No.{student.no}
-                                                </Badge>
-                                                <div className="flex-1 min-w-0">
-                                                    <h3 className="font-semibold text-lg text-gray-800 truncate">
-                                                        {student.fullName}
-                                                    </h3>
-                                                    <p className="text-sm text-gray-500 truncate">{student.fullFurigana}</p>
-                                                </div>
-                                            </div>
-                                        </Card>
-                                    </Link>
-                                ))
-                            ) : (
-                                <div className="text-center py-12">
-                                    <p className="text-gray-500 text-lg">該当する生徒が見つかりません</p>
-                                </div>
-                            )}
-                        </div>
-                    </TabsContent>
-
-                    {/* Grid View */}
-                    <TabsContent value="grid" className="mt-6">
-                        {filteredStudents.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {filteredStudents.map((student) => (
-                                    <Link key={student.no} href={`/?student=${encodeURIComponent(student.fullName)}`}>
-                                        <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer text-center">
-                                            <Badge variant="default" className="mb-3">
-                                                No.{student.no}
-                                            </Badge>
-                                            <h3 className="font-bold text-xl text-gray-800 mb-2">
-                                                {student.fullName}
-                                            </h3>
-                                            <p className="text-sm text-gray-500 text-center">{student.fullFurigana}</p>
-                                        </Card>
-                                    </Link>
-                                ))}
-                            </div>
-                        ) : (
-                            <div className="text-center py-12">
-                                <p className="text-gray-500 text-lg">該当する生徒が見つかりません</p>
-                            </div>
-                        )}
-                    </TabsContent>
-                </Tabs>
-
-                {/* Details Table */}
-                {filteredStudents.length > 0 && (
-                    <div className="mt-8 bg-white rounded-lg border overflow-x-auto">
-                        <table className="w-full text-sm">
-                            <thead className="border-b bg-gray-50 sticky top-0">
-                                <tr>
-                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">No.</th>
-                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">姓</th>
-                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">名</th>
-                                    <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">ふりがな</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {filteredStudents.map((student) => (
-                                    <tr
-                                        key={student.no}
-                                        className="border-b hover:bg-pink-50 cursor-pointer transition-colors"
-                                        onClick={() => {
-                                            window.location.href = `/?student=${encodeURIComponent(student.fullName)}`
-                                        }}
-                                    >
-                                        <td className="px-4 py-3 text-gray-800 font-medium">{student.no}</td>
-                                        <td className="px-4 py-3 font-semibold">{student.surname}</td>
-                                        <td className="px-4 py-3 font-semibold">{student.name}</td>
-                                        <td className="px-4 py-3 text-gray-600">
-                                            {student.surnameFurigana} {student.nameFurigana}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                {filteredStudents.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {filteredStudents.map((student) => (
+                            <Link key={student.no} href={`/?student=${encodeURIComponent(student.fullName)}`}>
+                                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer text-center">
+                                    <Badge variant="default" className="mb-3">
+                                        No.{student.no}
+                                    </Badge>
+                                    <h3 className="font-bold text-xl text-gray-800 mb-2">
+                                        {student.fullName}
+                                    </h3>
+                                    <p className="text-sm text-gray-500 text-center">{student.fullFurigana}</p>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center py-12">
+                        <p className="text-gray-500 text-lg">該当する生徒が見つかりません</p>
                     </div>
                 )}
+
             </div>
         </div>
     )

@@ -64,15 +64,18 @@ export function MessageCard({ card, index, onImageClick }: MessageCardProps) {
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.2 }}
           className="relative aspect-square overflow-hidden bg-background"
+          key={`image-${card.id}-${currentImageIndex}`}
         >
           {/* Image */}
           <Image
+            key={`${card.id}-${currentImageIndex}`}
             src={card.images[currentImageIndex]}
             alt={`${card.studentName}からのメッセージ`}
             fill
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={90}
+            priority={index < 4}
           />
 
           {/* Image navigation for multiple images - Hover only */}
