@@ -6,33 +6,13 @@ import { Spinner } from "@/components/ui/spinner"
 
 export function SlideshowVideo() {
     const videoRef = useRef<HTMLVideoElement>(null)
-    const [videoUrl, setVideoUrl] = useState<string | null>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [isBuffering, setIsBuffering] = useState(false)
     const [error, setError] = useState<string | null>(null)
 
-    // 署名付きURLをAPIから取得
-    useEffect(() => {
-        fetch("/api/video")
-            .then((r) => r.json())
-            .then(({ url, error }) => {
-                if (error) {
-                    setError("動画URLの取得に失敗しました")
-                    setIsLoading(false)
-                } else {
-                    setVideoUrl(url)
-                }
-            })
-            .catch(() => {
-                setError("動画URLの取得に失敗しました")
-                setIsLoading(false)
-            })
-    }, [])
-
-    // videoUrlがセットされたらイベントリスナーを登録
     useEffect(() => {
         const video = videoRef.current
-        if (!video || !videoUrl) return
+        if (!video) return
 
         const handleCanPlay = () => {
             setIsLoading(false)
@@ -70,7 +50,7 @@ export function SlideshowVideo() {
             video.removeEventListener("error", handleError)
             video.removeEventListener("loadstart", handleLoadStart)
         }
-    }, [videoUrl])
+    }, [])
 
     return (
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 py-12">
@@ -129,7 +109,7 @@ export function SlideshowVideo() {
                     {/* Video Element */}
                     <video
                         ref={videoRef}
-                        src={videoUrl ?? undefined}
+                        src="/api/video"
                         controls
                         preload="metadata"
                         className="w-full h-full"
