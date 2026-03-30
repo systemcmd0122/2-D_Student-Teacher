@@ -4,17 +4,35 @@ import { motion } from "framer-motion"
 import { useState, useRef, useEffect } from "react"
 import { Spinner } from "@/components/ui/spinner"
 
-const VIDEO_URL = "https://tojinxdttzebl9ez.private.blob.vercel-storage.com/movie.mp4"
-
 export function SlideshowVideo() {
     const videoRef = useRef<HTMLVideoElement>(null)
+    const [videoUrl, setVideoUrl] = useState<string | null>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [isBuffering, setIsBuffering] = useState(false)
     const [error, setError] = useState<string | null>(null)
 
+    // 署名付きURLをAPIから取得
+    useEffect(() => {
+        fetch("/api/video")
+            .then((r) => r.json())
+            .then(({ url, error }) => {
+                if (error) {
+                    setError("動画URLの取得に失敗しました")
+                    setIsLoading(false)
+                } else {
+                    setVideoUrl(url)
+                }
+            })
+            .catch(() => {
+                setError("動画URLの取得に失敗しました")
+                setIsLoading(false)
+            })
+    }, [])
+
+    // videoUrlがセットされたらイベントリスナーを登録
     useEffect(() => {
         const video = videoRef.current
-        if (!video) return
+        if (!video || !videoUrl) return
 
         const handleCanPlay = () => {
             setIsLoading(false)
@@ -52,7 +70,7 @@ export function SlideshowVideo() {
             video.removeEventListener("error", handleError)
             video.removeEventListener("loadstart", handleLoadStart)
         }
-    }, [])
+    }, [videoUrl])
 
     return (
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 py-12">
@@ -75,7 +93,7 @@ export function SlideshowVideo() {
                         >
                             <div className="text-center">
                                 <Spinner className="w-12 h-12 mx-auto mb-4 text-white" />
-                                <p className="text-white text-sm md:text-base">動画を読り込み中...</p>
+                                <p className="text-white text-sm md:text-base">動画を読み込み中...</p>
                             </div>
                         </motion.div>
                     )}
@@ -116,7 +134,7 @@ export function SlideshowVideo() {
                         className="w-full h-full"
                         controlsList="nodownload"
                     >
-                        <source src={VIDEO_URL} type="video/mp4" />
+                        {videoUrl && <source src={videoUrl} type="video/mp4" />}
                         お使いのブラウザは HTML5 video をサポートしていません
                     </video>
                 </div>
