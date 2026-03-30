@@ -129,12 +129,12 @@ export function SlideshowVideo() {
                     {/* Video Element */}
                     <video
                         ref={videoRef}
+                        src={videoUrl ?? undefined}
                         controls
                         preload="metadata"
                         className="w-full h-full"
                         controlsList="nodownload"
                     >
-                        {videoUrl && <source src={videoUrl} type="video/mp4" />}
                         お使いのブラウザは HTML5 video をサポートしていません
                     </video>
                 </div>
