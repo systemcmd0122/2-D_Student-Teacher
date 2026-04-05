@@ -2,16 +2,22 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
     const [isMounted, setIsMounted] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
         setIsMounted(true)
     }, [])
+
+    if (pathname === '/login') {
+        return null
+    }
 
     const navItems = [
         { label: "メッセージ", href: "/" },

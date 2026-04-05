@@ -47,6 +47,30 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
         />
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto"
+        >
+          <div className="group relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border-4 border-white transform hover:-rotate-1 transition-all duration-500">
+            <img
+              src="/memory1.jpg"
+              alt="2-D 集合写真 1"
+              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+          </div>
+          <div className="group relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border-4 border-white transform hover:rotate-1 transition-all duration-500">
+            <img
+              src="/memory2.jpg"
+              alt="2-D 集合写真 2"
+              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   )

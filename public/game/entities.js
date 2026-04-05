@@ -5,8 +5,9 @@
 const LANE_X = [-120, -40, 40, 120];
 
 class Player {
-  constructor(id) {
+  constructor(id, teacher = 'kai') {
     this.id   = id;
+    this.teacher = teacher;
     this.lane = id === 1 ? 2 : 3;
     this.x    = LANE_X[this.lane - 1];
     this.baseY = 110;
