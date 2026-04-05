@@ -49,11 +49,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ===== モード選択処理 =====
   let isSinglePlayer = false;
+  let selectedTeacher = 'kai'; // 'kai' or 'kinoshita'
   const btn1p = document.getElementById('btn-1p');
   const btn2p = document.getElementById('btn-2p');
   const dispP1 = document.getElementById('display-p1');
   const dispP2 = document.getElementById('display-p2');
   const dispCoop = document.getElementById('display-coop');
+  const charSelection = document.getElementById('character-selection');
+  const btnCharKai = document.getElementById('btn-char-kai');
+  const btnCharKinoshita = document.getElementById('btn-char-kinoshita');
+
+  const p1Name = dispP1.querySelector('.display-name');
+  const p1Avatar = dispP1.querySelector('.display-avatar');
+  const p1Card = dispP1;
 
   function updateModeUI() {
     if (isSinglePlayer) {
@@ -61,11 +69,34 @@ window.addEventListener('DOMContentLoaded', () => {
       btn2p.classList.remove('active');
       dispP2.style.opacity = '0.2';
       dispCoop.style.opacity = '0.2';
+      charSelection.classList.remove('hidden');
     } else {
       btn1p.classList.remove('active');
       btn2p.classList.add('active');
       dispP2.style.opacity = '1';
       dispCoop.style.opacity = '1';
+      charSelection.classList.add('hidden');
+      // 2人プレイ時は1Pは常に甲斐先生
+      selectedTeacher = 'kai';
+      updateTeacherUI();
+    }
+  }
+
+  function updateTeacherUI() {
+    if (selectedTeacher === 'kai') {
+      btnCharKai.classList.add('active');
+      btnCharKinoshita.classList.remove('active');
+      p1Name.textContent = '甲斐一成 先生';
+      p1Avatar.textContent = '甲';
+      p1Avatar.className = 'display-avatar p1-disp-avatar';
+      p1Card.className = 'player-display-card p1';
+    } else {
+      btnCharKai.classList.remove('active');
+      btnCharKinoshita.classList.add('active');
+      p1Name.textContent = '木下恵里加 先生';
+      p1Avatar.textContent = '木';
+      p1Avatar.className = 'display-avatar p2-disp-avatar';
+      p1Card.className = 'player-display-card p2';
     }
   }
 
@@ -78,6 +109,17 @@ window.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation();
     isSinglePlayer = false;
     updateModeUI();
+  });
+
+  btnCharKai.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectedTeacher = 'kai';
+    updateTeacherUI();
+  });
+  btnCharKinoshita.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectedTeacher = 'kinoshita';
+    updateTeacherUI();
   });
 
   // ===== タイトル入力待ち =====
@@ -126,7 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function startGame() {
     state = STATE.PLAYING;
     GameSys.onClear = handleClear;
-    GameSys.init(isSinglePlayer);
+    GameSys.init(isSinglePlayer, selectedTeacher);
     AudioSys.startBGM();
     lastTime = performance.now();
     requestAnimationFrame(loop);

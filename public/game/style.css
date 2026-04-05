@@ -960,6 +960,46 @@ h1.main-title {
   margin-bottom: 13px;
 }
 
+#character-selection {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.select-label {
+  font-size: 14px;
+  color: #ffd700;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.char-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.char-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #888;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.char-btn.active {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: #ffd700;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
 .instructions {
   font-size: 12px;
   color: #777;

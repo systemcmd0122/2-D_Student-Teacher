@@ -29,10 +29,10 @@ const GameSys = {
   _resultTimer: 0,
   _showResult: false,
 
-  init(isSinglePlayer = false) {
+  init(isSinglePlayer = false, selectedTeacher = 'kai') {
     this.isSinglePlayer = isSinglePlayer;
-    this.player1 = new Player(1);
-    this.player2 = this.isSinglePlayer ? null : new Player(2);
+    this.player1 = new Player(1, selectedTeacher);
+    this.player2 = this.isSinglePlayer ? null : new Player(2, 'kinoshita');
     this.scrollZ = 0;
     this.timePlayed = 0;
     this.progress = 0;
@@ -129,6 +129,22 @@ const GameSys = {
       } else {
         syncBadge.classList.toggle('hidden', this.getSharedLane() < 1);
       }
+    }
+
+    // 1Pの先生名表示を動的に更新
+    const p1Card = document.querySelector('.player-card.p1');
+    const p1Name = p1Card.querySelector('.pcard-name');
+    const p1Avatar = p1Card.querySelector('.pcard-avatar');
+    if (this.player1 && this.player1.teacher === 'kinoshita') {
+      p1Name.textContent = '木下恵里加 先生';
+      p1Avatar.textContent = '木';
+      p1Avatar.className = 'pcard-avatar p2-avatar';
+      p1Card.className = 'player-card p1 p2'; // p2のスタイルを適用
+    } else {
+      p1Name.textContent = '甲斐一成 先生';
+      p1Avatar.textContent = '甲';
+      p1Avatar.className = 'pcard-avatar p1-avatar';
+      p1Card.className = 'player-card p1';
     }
 
     const pct = (this.piecesCollected / this.TOTAL_PIECES) * 100;
@@ -267,14 +283,21 @@ const GameSys = {
 
     // プレイヤー判定テキスト（絵文字なし）
     let playerResult = '';
-    if (p1Correct && p2Correct) {
-      playerResult = '[○] 甲斐先生・木下先生  両者正解！';
-    } else if (p1Correct) {
-      playerResult = '[○] 甲斐先生（1P）正解  /  [×] 木下先生（2P）不正解';
-    } else if (p2Correct) {
-      playerResult = '[×] 甲斐先生（1P）不正解  /  [○] 木下先生（2P）正解';
+    const p1Label = this.player1 ? (this.player1.teacher === 'kai' ? '甲斐先生' : '木下先生') : '1P';
+    const p2Label = this.isSinglePlayer ? '' : '木下先生';
+
+    if (this.isSinglePlayer) {
+      playerResult = isCorrect ? '[○] ' + p1Label + ' 正解！' : '[×] ' + p1Label + ' 不正解…';
     } else {
-      playerResult = '[×] 甲斐先生・木下先生  両者不正解';
+      if (p1Correct && p2Correct) {
+        playerResult = '[○] ' + p1Label + '・' + p2Label + '  両者正解！';
+      } else if (p1Correct) {
+        playerResult = '[○] ' + p1Label + '（1P）正解  /  [×] ' + p2Label + '（2P）不正解';
+      } else if (p2Correct) {
+        playerResult = '[×] ' + p1Label + '（1P）不正解  /  [○] ' + p2Label + '（2P）正解';
+      } else {
+        playerResult = '[×] ' + p1Label + '・' + p2Label + '  両者不正解';
+      }
     }
 
     // 棒グラフ HTML
@@ -361,15 +384,17 @@ const GameSys = {
           p1Correct ? AudioSys.playCorrect() : AudioSys.playWrong();
         }
       } else {
+        const p1Label = this.player1 && this.player1.teacher === 'kai' ? '甲斐先生' : '木下先生';
+        const p2Label = '木下先生';
         if (p1Correct && p2Correct) {
           feedbackText = '答えは正解だったが\n2人でそろえてね！';
           feedbackClass = 'correct';
           if (typeof AudioSys !== 'undefined') AudioSys.playCorrect();
         } else if (p1Correct) {
-          feedbackText = '甲斐先生は正解\n木下先生は不正解';
+          feedbackText = p1Label + 'は正解\n' + p2Label + 'は不正解';
           if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
         } else if (p2Correct) {
-          feedbackText = '甲斐先生は不正解\n木下先生は正解';
+          feedbackText = p1Label + 'は不正解\n' + p2Label + 'は正解';
           if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
         } else {
           feedbackText = '2人とも不正解…';
