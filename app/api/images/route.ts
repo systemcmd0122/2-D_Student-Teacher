@@ -9,9 +9,9 @@ interface StudentImages {
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
-    const teacher = searchParams.get('teacher') as 'kai' | 'kisita'
+    const teacher = searchParams.get('teacher') as 'kai' | 'kinoshita'
 
-    if (!teacher || !['kai', 'kisita'].includes(teacher)) {
+    if (!teacher || !['kai', 'kinoshita'].includes(teacher)) {
         return NextResponse.json(
             { error: '無効な先生パラメータです' },
             { status: 400 }

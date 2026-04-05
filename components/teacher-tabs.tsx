@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 import { User } from "lucide-react"
 
 interface TeacherTabsProps {
-  activeTeacher: "kai" | "kisita"
-  onTeacherChange: (teacher: "kai" | "kisita") => void
+  activeTeacher: "kai" | "kinoshita"
+  onTeacherChange: (teacher: "kai" | "kinoshita") => void
 }
 
 export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps) {
@@ -29,15 +29,15 @@ export function TeacherTabs({ activeTeacher, onTeacherChange }: TeacherTabsProps
         )}
       </button>
       <button
-        onClick={() => onTeacherChange("kisita")}
-        className={`relative px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 flex items-center gap-2 ${activeTeacher === "kisita"
+        onClick={() => onTeacherChange("kinoshita")}
+        className={`relative px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 flex items-center gap-2 ${activeTeacher === "kinoshita"
           ? "bg-primary text-primary-foreground shadow-lg"
           : "bg-card text-card-foreground hover:bg-accent border border-border"
           }`}
       >
         <User className="w-4 h-4 md:w-5 md:h-5" />
         <span className="font-medium text-sm md:text-base">木下恵里加 先生</span>
-        {activeTeacher === "kisita" && (
+        {activeTeacher === "kinoshita" && (
           <motion.div
             layoutId="activeTab"
             className="absolute inset-0 rounded-full bg-primary -z-10"

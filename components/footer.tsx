@@ -39,7 +39,7 @@ export function Footer() {
 
         {/* Date */}
         <p className="text-muted-foreground text-sm md:text-base mb-12">
-          2026年3月 吉日
+          2025年3月 吉日
         </p>
 
         {/* Decorative Sakura */}
