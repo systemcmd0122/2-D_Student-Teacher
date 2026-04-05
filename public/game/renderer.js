@@ -97,8 +97,8 @@ const Renderer = {
 
     // プレイヤー描画（奥側→手前側の順：2P が手前なら後ろ先）
     // 常に1Pを先に描いて2Pを後で描く（重なり順）
-    this._drawPlayer(game.player1, '#00e5ff', '甲斐先生', '1P');
-    this._drawPlayer(game.player2, '#ff80ab', '木下先生', '2P');
+    if (game.player1) this._drawPlayer(game.player1, '#00e5ff', '甲斐先生', '1P');
+    if (game.player2) this._drawPlayer(game.player2, '#ff80ab', '木下先生', '2P');
   },
 
   // -----------------------------------------------------------------

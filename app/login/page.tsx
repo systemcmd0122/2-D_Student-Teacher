@@ -55,10 +55,10 @@ export default function LoginPage() {
             <Card className="w-full max-w-md p-8 shadow-lg">
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                        2年D組
+                        認証
                     </h1>
                     <p className="text-gray-600">
-                        先生へのメッセージサイト
+                        パスワードを入力してください
                     </p>
                 </div>
 

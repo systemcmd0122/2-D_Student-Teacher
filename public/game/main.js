@@ -47,6 +47,39 @@ window.addEventListener('DOMContentLoaded', () => {
   const countdownScreen = document.getElementById('countdown-screen');
   const clearScreen = document.getElementById('clear-screen');
 
+  // ===== モード選択処理 =====
+  let isSinglePlayer = false;
+  const btn1p = document.getElementById('btn-1p');
+  const btn2p = document.getElementById('btn-2p');
+  const dispP1 = document.getElementById('display-p1');
+  const dispP2 = document.getElementById('display-p2');
+  const dispCoop = document.getElementById('display-coop');
+
+  function updateModeUI() {
+    if (isSinglePlayer) {
+      btn1p.classList.add('active');
+      btn2p.classList.remove('active');
+      dispP2.style.opacity = '0.2';
+      dispCoop.style.opacity = '0.2';
+    } else {
+      btn1p.classList.remove('active');
+      btn2p.classList.add('active');
+      dispP2.style.opacity = '1';
+      dispCoop.style.opacity = '1';
+    }
+  }
+
+  btn1p.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isSinglePlayer = true;
+    updateModeUI();
+  });
+  btn2p.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isSinglePlayer = false;
+    updateModeUI();
+  });
+
   // ===== タイトル入力待ち =====
   window.addEventListener('keydown', (e) => {
     if (state === STATE.TITLE) {
@@ -93,7 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function startGame() {
     state = STATE.PLAYING;
     GameSys.onClear = handleClear;
-    GameSys.init();
+    GameSys.init(isSinglePlayer);
     AudioSys.startBGM();
     lastTime = performance.now();
     requestAnimationFrame(loop);

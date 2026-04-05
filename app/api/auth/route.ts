@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 // シンプルなパスワード認証
-// 実際の運用ではパスワードをハッシュ化して環境変数から取得してください
-const CORRECT_PASSWORD = process.env.SITE_PASSWORD || 'password123'
+// 2-Dに関連するパスワード（2-D佐土原）
+const CORRECT_PASSWORD = process.env.SITE_PASSWORD || '2DSadohara'
 
 export async function POST(request: NextRequest) {
     try {

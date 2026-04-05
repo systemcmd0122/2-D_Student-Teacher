@@ -4,6 +4,7 @@
 const GameSys = {
   player1: null,
   player2: null,
+  isSinglePlayer: false,
 
   scrollZ: 0,
   speedZ: 480,
@@ -28,9 +29,10 @@ const GameSys = {
   _resultTimer: 0,
   _showResult: false,
 
-  init() {
+  init(isSinglePlayer = false) {
+    this.isSinglePlayer = isSinglePlayer;
     this.player1 = new Player(1);
-    this.player2 = new Player(2);
+    this.player2 = this.isSinglePlayer ? null : new Player(2);
     this.scrollZ = 0;
     this.timePlayed = 0;
     this.progress = 0;
@@ -93,6 +95,7 @@ const GameSys = {
   },
 
   getSharedLane() {
+    if (this.isSinglePlayer) return this.player1 ? this.player1.lane : -1;
     if (this.player1 && this.player2 && this.player1.lane === this.player2.lane) {
       return this.player1.lane;
     }
@@ -101,21 +104,31 @@ const GameSys = {
 
   // ─── HUD 更新 ───
   _updateHUD() {
-    if (!this.player1 || !this.player2) return;
+    if (!this.player1) return;
 
     const p1Lane = this.player1.lane;
-    const p2Lane = this.player2.lane;
+    const p2Lane = this.player2 ? this.player2.lane : -1;
 
     for (let i = 1; i <= 4; i++) {
       const d1 = document.getElementById('p1-l' + i);
       const d2 = document.getElementById('p2-l' + i);
       if (d1) d1.classList.toggle('active', i === p1Lane);
-      if (d2) d2.classList.toggle('active', i === p2Lane);
+      if (d2) {
+        if (this.isSinglePlayer) {
+          d2.closest('.player-card').style.display = 'none';
+        } else {
+          d2.classList.toggle('active', i === p2Lane);
+        }
+      }
     }
 
     const syncBadge = document.getElementById('sync-badge');
     if (syncBadge) {
-      syncBadge.classList.toggle('hidden', this.getSharedLane() < 1);
+      if (this.isSinglePlayer) {
+        syncBadge.classList.add('hidden');
+      } else {
+        syncBadge.classList.toggle('hidden', this.getSharedLane() < 1);
+      }
     }
 
     const pct = (this.piecesCollected / this.TOTAL_PIECES) * 100;
@@ -336,24 +349,32 @@ const GameSys = {
       const p2Lane = this.player2 ? this.player2.lane : -1;
       const correctLane = quiz.correct;
       const p1Correct = (p1Lane === correctLane);
-      const p2Correct = (p2Lane === correctLane);
+      const p2Correct = this.isSinglePlayer || (p2Lane === correctLane);
 
       let feedbackText = '';
       let feedbackClass = 'wrong';
 
-      if (p1Correct && p2Correct) {
-        feedbackText = '答えは正解だったが\n2人でそろえてね！';
-        feedbackClass = 'correct';
-        if (typeof AudioSys !== 'undefined') AudioSys.playCorrect();
-      } else if (p1Correct) {
-        feedbackText = '甲斐先生は正解\n木下先生は不正解';
-        if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
-      } else if (p2Correct) {
-        feedbackText = '甲斐先生は不正解\n木下先生は正解';
-        if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
+      if (this.isSinglePlayer) {
+        feedbackText = p1Correct ? '正解！' : '不正解…';
+        feedbackClass = p1Correct ? 'correct' : 'wrong';
+        if (typeof AudioSys !== 'undefined') {
+          p1Correct ? AudioSys.playCorrect() : AudioSys.playWrong();
+        }
       } else {
-        feedbackText = '2人とも不正解…';
-        if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
+        if (p1Correct && p2Correct) {
+          feedbackText = '答えは正解だったが\n2人でそろえてね！';
+          feedbackClass = 'correct';
+          if (typeof AudioSys !== 'undefined') AudioSys.playCorrect();
+        } else if (p1Correct) {
+          feedbackText = '甲斐先生は正解\n木下先生は不正解';
+          if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
+        } else if (p2Correct) {
+          feedbackText = '甲斐先生は不正解\n木下先生は正解';
+          if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
+        } else {
+          feedbackText = '2人とも不正解…';
+          if (typeof AudioSys !== 'undefined') AudioSys.playWrong();
+        }
       }
 
       this._showFeedback(feedbackText, feedbackClass);
