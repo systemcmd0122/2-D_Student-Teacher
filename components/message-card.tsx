@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 export interface MessageCardData {
   id: string
   studentName: string
-  teacher: "kai" | "kisita"
+  teacher: "kai" | "kinoshita"
   images: string[]
 }
 

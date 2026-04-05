@@ -19,7 +19,7 @@ function FarewellPageContent() {
     const searchParams = useSearchParams()
     const studentName = searchParams.get('student')
 
-    const [activeTeacher, setActiveTeacher] = useState<"kai" | "kisita">("kai")
+    const [activeTeacher, setActiveTeacher] = useState<"kai" | "kinoshita">("kai")
     const [lightboxImages, setLightboxImages] = useState<string[]>([])
     const [lightboxStartIndex, setLightboxStartIndex] = useState(0)
     const [messageCards, setMessageCards] = useState<MessageCardData[]>([])
@@ -36,10 +36,10 @@ function FarewellPageContent() {
             try {
                 setLoading(true)
                 const kaiResponse = await fetch('/api/images?teacher=kai')
-                const kisitaResponse = await fetch('/api/images?teacher=kisita')
+                const kinoshitaResponse = await fetch('/api/images?teacher=kinoshita')
 
                 const kaiData = kaiResponse.ok ? await kaiResponse.json() : []
-                const kisitaData = kisitaResponse.ok ? await kisitaResponse.json() : []
+                const kinoshitaData = kinoshitaResponse.ok ? await kinoshitaResponse.json() : []
 
                 // API のレスポンスを MessageCardData 形式に変換
                 const kaiCards: MessageCardData[] = kaiData.map((item: any, index: number) => ({
@@ -49,14 +49,14 @@ function FarewellPageContent() {
                     images: item.images,
                 }))
 
-                const kisitaCards: MessageCardData[] = kisitaData.map((item: any, index: number) => ({
-                    id: `kisita-${index}`,
+                const kinoshitaCards: MessageCardData[] = kinoshitaData.map((item: any, index: number) => ({
+                    id: `kinoshita-${index}`,
                     studentName: item.studentName,
-                    teacher: "kisita" as const,
+                    teacher: "kinoshita" as const,
                     images: item.images,
                 }))
 
-                setMessageCards([...kaiCards, ...kisitaCards])
+                setMessageCards([...kaiCards, ...kinoshitaCards])
             } catch (error) {
                 console.error('画像データの読み込みに失敗しました:', error)
             } finally {

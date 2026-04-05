@@ -5,7 +5,7 @@ import { MessageCard, type MessageCardData } from "./message-card"
 
 interface MessageGalleryProps {
   cards: MessageCardData[]
-  activeTeacher: "kai" | "kisita"
+  activeTeacher: "kai" | "kinoshita"
   onImageClick: (images: string[], startIndex: number) => void
   isDetailView?: boolean
 }

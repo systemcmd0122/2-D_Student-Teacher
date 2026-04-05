@@ -22,11 +22,13 @@ export default function RosterPage() {
     const [searchQuery, setSearchQuery] = useState("")
 
     const filteredStudents = useMemo(() => {
+        const query = searchQuery.toLowerCase().replace(/[\s　]/g, "")
         return (roster as Student[]).filter((student) => {
-            const query = searchQuery.toLowerCase()
+            const fullName = student.fullName.toLowerCase().replace(/[\s　]/g, "")
+            const fullFurigana = student.fullFurigana.toLowerCase().replace(/[\s　]/g, "")
             return (
-                student.fullName.toLowerCase().includes(query) ||
-                student.fullFurigana.toLowerCase().includes(query) ||
+                fullName.includes(query) ||
+                fullFurigana.includes(query) ||
                 student.surname.toLowerCase().includes(query) ||
                 student.name.toLowerCase().includes(query) ||
                 student.no.toString().includes(query)
