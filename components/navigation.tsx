@@ -16,6 +16,7 @@ export function Navigation() {
     const navItems = [
         { label: "メッセージ", href: "/" },
         { label: "思い出の動画", href: "/video" },
+        { label: "思い出ラン", href: "/game" },
         { label: "クラス名簿", href: "/roster" },
     ]
 

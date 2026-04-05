@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思い出ラン ― 甲斐先生・木下先生 ありがとうございました</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD Layer -->
+    <div id="hud-layer">
+
+      <!-- 左上：思い出の写真フレーム -->
+      <div id="photo-frame">
+        <div id="photo-label">思い出の写真</div>
+        <div id="photo-grid"></div>
+        <div id="piece-count">0 / 40</div>
+      </div>
+
+      <!-- 中央上：クイズポップアップ -->
+      <div id="quiz-popup" class="hidden">
+        <div id="quiz-header">QUIZ &mdash; クラスアンケート</div>
+        <div id="quiz-question"></div>
+      </div>
+
+      <!-- 右上：プレイヤー情報 -->
+      <div id="player-info">
+
+        <!-- 1P カード -->
+        <div class="player-card p1">
+          <div class="pcard-strip"></div>
+          <div class="pcard-main">
+            <div class="pcard-avatar-col">
+              <div class="pcard-avatar p1-avatar">甲</div>
+              <div class="pcard-badge p1-badge">1P</div>
+            </div>
+            <div class="pcard-info-col">
+              <div class="pcard-name">甲斐一成 先生</div>
+              <div class="pcard-lane-row">
+                <span class="pcard-lane-label">LANE</span>
+                <div class="lane-indicator">
+                  <div class="lane-dot" id="p1-l1">1</div>
+                  <div class="lane-dot" id="p1-l2">2</div>
+                  <div class="lane-dot" id="p1-l3">3</div>
+                  <div class="lane-dot" id="p1-l4">4</div>
+                </div>
+              </div>
+              <div class="pcard-keys">
+                <kbd>A</kbd>
+                <span class="pcard-arrow">&#9664;</span>
+                <span class="key-mid">MOVE</span>
+                <span class="pcard-arrow">&#9654;</span>
+                <kbd>D</kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2P カード -->
+        <div class="player-card p2">
+          <div class="pcard-strip"></div>
+          <div class="pcard-main">
+            <div class="pcard-avatar-col">
+              <div class="pcard-avatar p2-avatar">木</div>
+              <div class="pcard-badge p2-badge">2P</div>
+            </div>
+            <div class="pcard-info-col">
+              <div class="pcard-name">木下恵里加 先生</div>
+              <div class="pcard-lane-row">
+                <span class="pcard-lane-label">LANE</span>
+                <div class="lane-indicator">
+                  <div class="lane-dot" id="p2-l1">1</div>
+                  <div class="lane-dot" id="p2-l2">2</div>
+                  <div class="lane-dot" id="p2-l3">3</div>
+                  <div class="lane-dot" id="p2-l4">4</div>
+                </div>
+              </div>
+              <div class="pcard-keys">
+                <kbd>&#8592;</kbd>
+                <span class="pcard-arrow">&#9664;</span>
+                <span class="key-mid">MOVE</span>
+                <span class="pcard-arrow">&#9654;</span>
+                <kbd>&#8594;</kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 協力中バッジ -->
+        <div id="sync-badge" class="hidden">SYNC &mdash; 協力中</div>
+      </div>
+
+      <!-- 判定フィードバック -->
+      <div id="answer-feedback" class="hidden"></div>
+
+      <!-- アンケート結果バナー -->
+      <div id="result-banner" class="hidden"></div>
+
+      <!-- 下部：進行バー -->
+      <div id="bottom-hud">
+        <div id="progress-area">
+          <span id="quiz-remaining">残り <strong id="quiz-remaining-num">40</strong> 問</span>
+          <div id="progress-bar-wrap">
+            <div id="progress-bar-fill"></div>
+            <div id="progress-bar-label">0 / 40</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen">
+      <div class="title-school-info">
+        <p class="school-name">宮崎県立佐土原高等学校</p>
+        <p class="class-name" id="class-name-display"></p>
+      </div>
+
+      <h1 class="main-title">思い出ラン</h1>
+      <div class="title-sub">甲斐先生・木下先生<br>ありがとうございました</div>
+
+      <div class="player-display">
+        <div class="player-display-card p1">
+          <span class="display-p">1P</span>
+          <div class="display-avatar p1-disp-avatar">甲</div>
+          <span class="display-name">甲斐一成 先生</span>
+          <div class="display-keys"><kbd>A</kbd> / <kbd>D</kbd></div>
+        </div>
+        <div class="coop-label">
+          <div class="coop-line"></div>
+          <span>協力</span>
+          <div class="coop-line"></div>
+        </div>
+        <div class="player-display-card p2">
+          <span class="display-p">2P</span>
+          <div class="display-avatar p2-disp-avatar">木</div>
+          <span class="display-name">木下恵里加 先生</span>
+          <div class="display-keys"><kbd>&#8592;</kbd> / <kbd>&#8594;</kbd></div>
+        </div>
+      </div>
+
+      <div class="start-hint">
+        <p class="blink">どちらかのキーを押してスタート</p>
+        <p class="small-hint">Space &nbsp;/&nbsp; Enter</p>
+      </div>
+      <div class="instructions">
+        <p>2人で同じレーンに入ってアンケートの1位をあてよう</p>
+        <p class="survey-note">問題はクラス内アンケートの実際の結果です</p>
+      </div>
+    </div>
+
+    <!-- カウントダウン画面 -->
+    <div id="countdown-screen" class="screen hidden">
+      <div id="countdown-number">3</div>
+    </div>
+
+    <!-- クリア画面 -->
+    <div id="clear-screen" class="screen hidden">
+      <canvas id="confetti-canvas" width="800" height="500"></canvas>
+      <div class="clear-content">
+        <h2 class="clear-title">写真完成</h2>
+        <div id="clear-photo-display">
+          <img id="class-photo-img" src="" alt="クラス写真">
+        </div>
+        <div class="clear-message">
+          <p class="clear-main">甲斐先生・木下先生、ありがとうございました</p>
+          <p class="clear-teacher p1-color">甲斐先生、いつも熱く私たちと向き合ってくれて<br>本当にありがとうございました。<br>先生の授業と言葉は、これからもずっと胸に残ります。</p>
+          <p class="clear-teacher p2-color">木下先生、いつも優しく気にかけてくれて<br>本当にありがとうございました。<br>先生の笑顔に何度も救われました。</p>
+          <p class="clear-sub">2年D組 情報技術科一同より</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="input.js"></script>
+  <script src="quiz.js"></script>
+  <script src="entities.js"></script>
+  <script src="renderer.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
