@@ -17,8 +17,12 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: '2年D組 先生へのメッセージ',
-  description: '佐土原高校 情報技術科 2年D組より、甲斐先生・木下先生への感謝のメッセージ',
+  title: '2年D組',
+  description: '2年D組の特設サイト',
+  robots: {
+    index: false,
+    follow: false,
+  },
   generator: 'v0.app',
   icons: {
     icon: [

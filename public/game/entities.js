@@ -55,14 +55,17 @@ class PieceLane {
   // 判定ウィンドウ拡大：z=30〜450（元は50〜300）
   checkHit(player1, player2) {
     if (this.hit || !this.active) return false;
-    if (!player1 || !player2) return false;
+    if (!player1) return false;
     if (this.z > 450 || this.z < 30) return false;
-    if (player1.lane !== player2.lane) return false;
+
+    const isSingle = GameSys.isSinglePlayer;
+
+    if (!isSingle && (!player2 || player1.lane !== player2.lane)) return false;
 
     const laneNum = player1.lane;
     const targetX = LANE_X[laneNum - 1];
     const p1ok = Math.abs(player1.x - targetX) < 90;
-    const p2ok = Math.abs(player2.x - targetX) < 90;
+    const p2ok = isSingle ? true : (player2 && Math.abs(player2.x - targetX) < 90);
 
     if (p1ok && p2ok) {
       this.hit     = true;
