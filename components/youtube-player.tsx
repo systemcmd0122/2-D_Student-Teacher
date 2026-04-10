@@ -32,6 +32,34 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
     const [showControls, setShowControls] = useState(true)
     const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
+    // 利用可能な最高画質を設定する関数
+    const setHighestQuality = (player: any) => {
+        if (!player || !player.setPlaybackQuality) return
+
+        // 優先順位付きの品質オプション（高い順）
+        const qualityLevels = ['hd1080', 'hd720', 'large', 'medium', 'small']
+
+        try {
+            const availableQualities = player.getAvailableQualityLevels()
+
+            // 利用可能な品質の中から最高のものを選択
+            for (const quality of qualityLevels) {
+                if (availableQualities.includes(quality)) {
+                    player.setPlaybackQuality(quality)
+                    return
+                }
+            }
+        } catch (error) {
+            console.warn('品質設定エラー:', error)
+            // フォールバック: hd1080を試す
+            try {
+                player.setPlaybackQuality('hd1080')
+            } catch (e) {
+                console.warn('フォールバック品質設定エラー:', e)
+            }
+        }
+    }
+
     useEffect(() => {
         let player: any = null;
 
@@ -53,7 +81,6 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
                     playsinline: 1,
                     autoplay: 0,
                     hl: 'ja',
-                    vq: 'hd1080',
                     enablejsapi: 1,
                     origin: typeof window !== 'undefined' ? window.location.origin : undefined,
                 },
@@ -62,16 +89,16 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
                         setIsPlayerReady(true)
                         setDuration(event.target.getDuration())
                         playerRef.current = event.target
-                        if (event.target.setPlaybackQuality) {
-                            event.target.setPlaybackQuality('hd1080')
-                        }
+                        // 利用可能な最高画質を設定
+                        setHighestQuality(event.target)
                     },
                     onStateChange: (event: any) => {
                         if (event.data === window.YT.PlayerState.PLAYING) {
                             setIsPlaying(true)
-                            if (event.target.setPlaybackQuality) {
-                                event.target.setPlaybackQuality('hd1080')
-                            }
+                            // 再生開始時に画質を最適化
+                            setTimeout(() => {
+                                setHighestQuality(event.target)
+                            }, 500)
                         } else {
                             setIsPlaying(false)
                         }
