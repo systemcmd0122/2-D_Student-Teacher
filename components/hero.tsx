@@ -3,7 +3,13 @@
 import { motion } from "framer-motion"
 import { Heart } from "lucide-react"
 
-export function Hero() {
+interface HeroProps {
+  onImageClick?: (images: string[], index: number) => void
+}
+
+export function Hero({ onImageClick }: HeroProps) {
+  const memoryImages = ["/memory1.jpg", "/memory2.jpg"]
+
   return (
     <section className="relative py-16 md:py-24 lg:py-32 text-center">
       <motion.div
@@ -54,22 +60,21 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
           className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto"
         >
-          <div className="group relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border-4 border-white transform hover:-rotate-1 transition-all duration-500">
-            <img
-              src="/memory1.jpg"
-              alt="2-D 集合写真 1"
-              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-          </div>
-          <div className="group relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border-4 border-white transform hover:rotate-1 transition-all duration-500">
-            <img
-              src="/memory2.jpg"
-              alt="2-D 集合写真 2"
-              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-          </div>
+          {memoryImages.map((src, index) => (
+            <div
+              key={src}
+              className={`group relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border-4 border-white transform transition-all duration-500 cursor-pointer ${index === 0 ? "hover:-rotate-1" : "hover:rotate-1"
+                }`}
+              onClick={() => onImageClick?.(memoryImages, index)}
+            >
+              <img
+                src={src}
+                alt={`2-D 集合写真 ${index + 1}`}
+                className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+            </div>
+          ))}
         </motion.div>
       </motion.div>
     </section>
