@@ -1,11 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { YouTubePlayer } from "./youtube-player"
 
 export function SlideshowVideo() {
-    const [isLoading, setIsLoading] = useState(true)
-
     return (
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 py-12">
             <motion.div
@@ -13,33 +11,9 @@ export function SlideshowVideo() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative rounded-xl overflow-hidden shadow-2xl"
+                className="relative rounded-xl overflow-hidden shadow-2xl bg-black"
             >
-                {/* Video Container */}
-                <div
-                    className="relative aspect-video bg-black"
-                    onContextMenu={(e) => e.preventDefault()}
-                >
-                    {isLoading && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-900 animate-pulse">
-                            <p className="text-white text-sm">読み込み中...</p>
-                        </div>
-                    )}
-
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/qTbJzGTnYA8?rel=0&modestbranding=1"
-                        title="思い出のスライドショー"
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                        onLoad={() => setIsLoading(false)}
-                    ></iframe>
-
-                    {/* Overlay to discourage right-click/copy on some areas if needed,
-                        but YouTube iframe handles most of it.
-                        The pointer-events-none on a full overlay would block controls.
-                    */}
-                </div>
+                <YouTubePlayer videoId="qTbJzGTnYA8" />
 
                 {/* Video Info */}
                 <motion.div
