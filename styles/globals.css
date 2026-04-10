@@ -119,7 +119,41 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* YouTubeプレーヤーのUI要素を非表示化 */
+iframe[src*="youtube.com"] {
+  pointer-events: none !important;
+}
+
+/* YouTubeプレーヤーのすべてのコントロール/UI要素を隠す */
+.ytp-large-play-button,
+.ytp-gradient-bottom,
+.ytp-gradient-top,
+.ytp-chrome-bottom,
+.ytp-player-info,
+.ytp-show-watch-later-button,
+.ytp-watch-later-button-icon,
+.ytp-add-to-playlist-button,
+.ytp-button,
+.ytp-control-bar,
+.ytp-progress-bar-container,
+.ytp-share-button,
+.ytp-svg-collapse {
+  display: none !important;
+}
+
+/* YouTube情報パネルを非表示 */
+.ytp-information-button-corner {
+  display: none !important;
+}
+
+/* YouTubeの字幕ボタンを隠す */
+.ytp-subtitles-button,
+.ytp-cc-button {
+  display: none !important;
 }
