@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { X } from "lucide-react"
 import { SakuraPetals } from "@/components/sakura-petals"
 import { Hero } from "@/components/hero"
+import { FarewellVideo } from "@/components/farewell-video"
 import { TeacherTabs } from "@/components/teacher-tabs"
 import { MessageGallery } from "@/components/message-gallery"
 import { AlbumLoadingScreen } from "@/components/album-loading"
@@ -79,7 +80,10 @@ function FarewellPageContent() {
 
             <div className="relative z-10">
                 {/* Hero Section */}
-                {!studentName && <Hero />}
+                {!studentName && <Hero onImageClick={handleImageClick} />}
+
+                {/* Farewell Video Section */}
+                {!studentName && <FarewellVideo />}
 
                 {/* Main Content */}
                 <section className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">

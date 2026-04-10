@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { X, ChevronLeft, ChevronRight, AlertCircle } from "lucide-react"
+import { X, ChevronLeft, ChevronRight, AlertCircle, Download } from "lucide-react"
 import { useEffect, useState, useCallback } from "react"
 import { createPortal } from "react-dom"
 
@@ -66,6 +66,29 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
     goToNext()
   }
 
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const imageUrl = images[currentIndex]
+    try {
+      const response = await fetch(imageUrl)
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const a = document.createElement("a")
+      a.href = url
+      // ファイル名を抽出または生成
+      const fileName = imageUrl.split('/').pop() || `memory-${currentIndex + 1}.jpg`
+      a.download = decodeURIComponent(fileName)
+      document.body.appendChild(a)
+      a.click()
+      window.URL.revokeObjectURL(url)
+      document.body.removeChild(a)
+    } catch (error) {
+      console.error("ダウンロードに失敗しました:", error)
+      // フォールバック: 単に新しいタブで開く
+      window.open(imageUrl, '_blank')
+    }
+  }
+
   const handleImageError = (src: string) => {
     setImageErrors(prev => new Set(prev).add(src))
   }
@@ -79,19 +102,36 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
     <AnimatePresence>
       {images.length > 0 && (
         <>
-          {/* Close Button - Outside modal for proper z-indexing */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="fixed top-4 right-4 md:top-6 md:right-6 w-12 h-12 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl hover:bg-white transition-all duration-200 z-[9999] cursor-pointer border border-gray-200"
-            onClick={onClose}
-            aria-label="閉じる"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <X className="w-6 h-6 text-gray-800" strokeWidth={3} />
-          </motion.button>
+          {/* Action Buttons - Outside modal for proper z-indexing */}
+          <div className="fixed top-4 right-4 md:top-6 md:right-6 flex gap-3 md:gap-4 z-[9999]">
+            {/* Download Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              className="w-12 h-12 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl hover:bg-white transition-all duration-200 cursor-pointer border border-gray-200"
+              onClick={handleDownload}
+              aria-label="ダウンロード"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download className="w-6 h-6 text-gray-800" strokeWidth={2.5} />
+            </motion.button>
+
+            {/* Close Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              className="w-12 h-12 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl hover:bg-white transition-all duration-200 cursor-pointer border border-gray-200"
+              onClick={onClose}
+              aria-label="閉じる"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <X className="w-6 h-6 text-gray-800" strokeWidth={3} />
+            </motion.button>
+          </div>
 
           {/* Modal backdrop and content */}
           <motion.div
