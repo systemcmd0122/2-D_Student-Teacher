@@ -144,7 +144,7 @@ export function FarewellVideo() {
                     {/* Video Element */}
                     <video
                         ref={videoRef}
-                        src="/api/video-farewell"
+                        src="/farewell.mp4"
                         controls
                         preload="metadata"
                         className="w-full h-full"

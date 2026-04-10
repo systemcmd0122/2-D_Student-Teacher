@@ -134,11 +134,10 @@ export function SlideshowVideo() {
                     {/* Video Element */}
                     <video
                         ref={videoRef}
-                        src="/api/video"
+                        src="/slideshow.mp4"
                         controls
                         preload="auto"
                         className="w-full h-full"
-                        controlsList="nodownload"
                     >
                         お使いのブラウザは HTML5 video をサポートしていません
                     </video>
