@@ -54,6 +54,7 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
                     autoplay: 0,
                     hl: 'ja',
                     vq: 'hd1080',
+                    enablejsapi: 1,
                     origin: typeof window !== 'undefined' ? window.location.origin : undefined,
                 },
                 events: {
@@ -209,9 +210,7 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
         >
             {/* The actual YouTube Player */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
-                <div className="absolute top-[-15%] left-[-10%] w-[120%] h-[130%]">
-                    <div id={playerId} className="w-full h-full" />
-                </div>
+                <div id={playerId} className="w-full h-full" />
             </div>
 
             {/* Interaction Overlay (blocks direct YouTube interaction) */}
