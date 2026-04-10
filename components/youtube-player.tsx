@@ -40,6 +40,9 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
 
             player = new window.YT.Player(playerId, {
                 videoId: videoId,
+                width: '100%',
+                height: '100%',
+                host: 'https://www.youtube.com',
                 playerVars: {
                     controls: 0,
                     modestbranding: 1,
@@ -49,16 +52,25 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
                     fs: 0,
                     playsinline: 1,
                     autoplay: 0,
+                    hl: 'ja',
+                    vq: 'hd1080',
+                    origin: typeof window !== 'undefined' ? window.location.origin : undefined,
                 },
                 events: {
                     onReady: (event: any) => {
                         setIsPlayerReady(true)
                         setDuration(event.target.getDuration())
                         playerRef.current = event.target
+                        if (event.target.setPlaybackQuality) {
+                            event.target.setPlaybackQuality('hd1080')
+                        }
                     },
                     onStateChange: (event: any) => {
                         if (event.data === window.YT.PlayerState.PLAYING) {
                             setIsPlaying(true)
+                            if (event.target.setPlaybackQuality) {
+                                event.target.setPlaybackQuality('hd1080')
+                            }
                         } else {
                             setIsPlaying(false)
                         }
@@ -196,8 +208,10 @@ export function YouTubePlayer({ videoId }: YouTubePlayerProps) {
             onMouseLeave={() => isPlaying && setShowControls(false)}
         >
             {/* The actual YouTube Player */}
-            <div className="absolute inset-0 pointer-events-none scale-[1.01] origin-center">
-                <div id={playerId} className="w-full h-full" />
+            <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+                <div className="absolute top-[-15%] left-[-10%] w-[120%] h-[130%]">
+                    <div id={playerId} className="w-full h-full" />
+                </div>
             </div>
 
             {/* Interaction Overlay (blocks direct YouTube interaction) */}

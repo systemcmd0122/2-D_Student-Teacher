@@ -1,0 +1,1978 @@
+
+> my-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env
+✓ Ready in 493ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+○ Compiling /login ...
+ GET /login 200 in 7.1s (next.js: 6.4s, proxy.ts: 116ms, application-code: 600ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 557ms (next.js: 525ms, application-code: 32ms)
+ GET / 200 in 1506ms (next.js: 1438ms, proxy.ts: 10ms, application-code: 58ms)
+ GET / 200 in 78ms (next.js: 7ms, proxy.ts: 9ms, application-code: 62ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 676ms (next.js: 612ms, application-code: 64ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 20ms (next.js: 10ms, application-code: 10ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 18ms (next.js: 8ms, application-code: 10ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 18ms (next.js: 4ms, application-code: 15ms)
+ GET /video 200 in 2.1s (next.js: 1880ms, proxy.ts: 12ms, application-code: 194ms)
+ GET /login 200 in 69ms (next.js: 5ms, proxy.ts: 4ms, application-code: 60ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 13ms (next.js: 3ms, application-code: 10ms)
+ GET / 200 in 56ms (next.js: 4ms, proxy.ts: 6ms, application-code: 45ms)
+ GET / 200 in 74ms (next.js: 24ms, proxy.ts: 8ms, application-code: 41ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 13ms (next.js: 5ms, application-code: 8ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 8ms (next.js: 2ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 12ms (next.js: 3ms, application-code: 9ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 10ms (next.js: 4ms, application-code: 6ms)
+ GET /video 200 in 96ms (next.js: 4ms, proxy.ts: 4ms, application-code: 88ms)
+ GET /api/auth?password=2DSadowara 405 in 8ms (next.js: 3ms, application-code: 5ms)
+ GET /login 200 in 70ms (next.js: 5ms, proxy.ts: 3ms, application-code: 62ms)
+ GET /api/auth?password=2DSadowara 405 in 8ms (next.js: 3ms, application-code: 5ms)
+ GET /login 200 in 71ms (next.js: 4ms, proxy.ts: 4ms, application-code: 63ms)
+ GET /login 200 in 59ms (next.js: 3ms, proxy.ts: 3ms, application-code: 53ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 19ms (next.js: 5ms, application-code: 14ms)
+ GET / 200 in 38ms (next.js: 9ms, proxy.ts: 6ms, application-code: 23ms)
+ GET / 200 in 60ms (next.js: 6ms, proxy.ts: 7ms, application-code: 48ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 12ms (next.js: 3ms, application-code: 9ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 11ms (next.js: 4ms, application-code: 7ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 9ms (next.js: 3ms, application-code: 6ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET /video 200 in 152ms (next.js: 9ms, proxy.ts: 9ms, application-code: 134ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none scale-[1.25] origin-center bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 73ms (next.js: 9ms, proxy.ts: 4ms, application-code: 59ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET / 200 in 35ms (next.js: 7ms, proxy.ts: 4ms, application-code: 25ms)
+ GET / 200 in 105ms (next.js: 11ms, proxy.ts: 4ms, application-code: 91ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 18ms (next.js: 7ms, application-code: 11ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 8ms (next.js: 2ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 11ms (next.js: 3ms, application-code: 8ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 8ms (next.js: 2ms, application-code: 6ms)
+ GET /video 200 in 291ms (next.js: 37ms, proxy.ts: 9ms, application-code: 245ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none scale-[1.35] origin-center bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 61ms (next.js: 6ms, proxy.ts: 4ms, application-code: 51ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET / 200 in 41ms (next.js: 9ms, proxy.ts: 9ms, application-code: 23ms)
+ GET / 200 in 99ms (next.js: 14ms, proxy.ts: 4ms, application-code: 81ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 10ms (next.js: 3ms, application-code: 7ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 11ms (next.js: 6ms, application-code: 5ms)
+ GET /video 200 in 133ms (next.js: 13ms, proxy.ts: 3ms, application-code: 117ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[1..."
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 69ms (next.js: 7ms, proxy.ts: 5ms, application-code: 57ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 12ms (next.js: 2ms, application-code: 10ms)
+ GET / 200 in 42ms (next.js: 6ms, proxy.ts: 7ms, application-code: 28ms)
+ GET / 200 in 91ms (next.js: 9ms, proxy.ts: 3ms, application-code: 79ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 13ms (next.js: 6ms, application-code: 7ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 8ms (next.js: 3ms, application-code: 5ms)
+ GET /video 200 in 139ms (next.js: 10ms, proxy.ts: 3ms, application-code: 126ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-[-15%] left-[-15%] w-[130%] h-[130%]"
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 76ms (next.js: 6ms, proxy.ts: 5ms, application-code: 64ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 18ms (next.js: 4ms, application-code: 14ms)
+ GET / 200 in 40ms (next.js: 8ms, proxy.ts: 5ms, application-code: 26ms)
+ GET / 200 in 43ms (next.js: 7ms, proxy.ts: 3ms, application-code: 33ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 12ms (next.js: 7ms, application-code: 5ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 6ms (next.js: 1997µs, application-code: 4ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 7ms (next.js: 2ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 7ms (next.js: 3ms, application-code: 5ms)
+ GET /video 200 in 228ms (next.js: 19ms, proxy.ts: 7ms, application-code: 202ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-[-25%] left-[-25%] w-[150%] h-[150%]"
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 63ms (next.js: 5ms, proxy.ts: 5ms, application-code: 53ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 31ms (next.js: 7ms, application-code: 24ms)
+ GET / 200 in 32ms (next.js: 7ms, proxy.ts: 4ms, application-code: 22ms)
+ GET / 200 in 49ms (next.js: 10ms, proxy.ts: 4ms, application-code: 35ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 12ms (next.js: 7ms, application-code: 5ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 6ms (next.js: 1937µs, application-code: 4ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 11ms (next.js: 2ms, application-code: 9ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 7ms (next.js: 1943µs, application-code: 5ms)
+ GET /video 200 in 163ms (next.js: 27ms, proxy.ts: 12ms, application-code: 124ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-[-18%] left-[-10%] w-[120%] h-[136%]"
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 68ms (next.js: 7ms, proxy.ts: 4ms, application-code: 57ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 18ms (next.js: 4ms, application-code: 14ms)
+ GET / 200 in 32ms (next.js: 6ms, proxy.ts: 4ms, application-code: 22ms)
+ GET / 200 in 166ms (next.js: 9ms, proxy.ts: 3ms, application-code: 154ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 11ms (next.js: 5ms, application-code: 6ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 8ms (next.js: 2ms, application-code: 6ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 12ms (next.js: 2ms, application-code: 10ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 13ms (next.js: 4ms, application-code: 8ms)
+ GET /video 200 in 196ms (next.js: 25ms, proxy.ts: 5ms, application-code: 166ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-[-22%] left-[-10%] w-[120%] h-[144%]"
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 59ms (next.js: 5ms, proxy.ts: 4ms, application-code: 51ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 19ms (next.js: 7ms, application-code: 12ms)
+ GET / 200 in 33ms (next.js: 9ms, proxy.ts: 4ms, application-code: 20ms)
+ GET / 200 in 54ms (next.js: 5ms, proxy.ts: 3ms, application-code: 45ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 9ms (next.js: 3ms, application-code: 7ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 9ms (next.js: 4ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 10ms (next.js: 2ms, application-code: 8ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 14ms (next.js: 10ms, application-code: 4ms)
+ GET /video 200 in 252ms (next.js: 37ms, proxy.ts: 8ms, application-code: 208ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
+                                  id="player-_R_qd5esnelb_"
++                                 className="absolute top-[-28%] left-[-15%] w-[130%] h-[156%]"
+-                                 className="w-full h-full"
+                                >
+                              ...
+                          ...
+              ...
+
+ GET /login 200 in 65ms (next.js: 5ms, proxy.ts: 6ms, application-code: 54ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 14ms (next.js: 3ms, application-code: 11ms)
+ GET / 200 in 37ms (next.js: 9ms, proxy.ts: 5ms, application-code: 23ms)
+ GET / 200 in 112ms (next.js: 10ms, proxy.ts: 3ms, application-code: 99ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 11ms (next.js: 3ms, application-code: 8ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 7ms (next.js: 3ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 7ms (next.js: 2ms, application-code: 4ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 13ms (next.js: 7ms, application-code: 6ms)
+ GET /video 200 in 194ms (next.js: 19ms, proxy.ts: 4ms, application-code: 171ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
++                                 className="absolute top-[-28%] left-[-15%] w-[130%] h-[156%]"
+-                                 className="w-full h-full"
+-                                 id="player-_R_qd5esnelb_"
+                                >
++                                 <div id="player-_R_qd5esnelb_" className="w-full h-full">
+                              ...
+                          ...
+              ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at YouTubePlayer (components/youtube-player.tsx:212:21)
+    at SlideshowVideo (components/slideshow-video.tsx:16:17)
+    at SlideshowPageContent (components/slideshow-page-content.tsx:21:21)
+    at SlideshowPage (app/video/page.tsx:13:13)
+  210 |             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+  211 |                 <div className="absolute top-[-28%] left-[-15%] w-[130%] h-[156%]">
+> 212 |                     <div id={playerId} className="w-full h-full" />
+      |                     ^
+  213 |                 </div>
+  214 |             </div>
+  215 |
+ GET /login 200 in 58ms (next.js: 3ms, proxy.ts: 4ms, application-code: 50ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 25ms (next.js: 9ms, application-code: 15ms)
+ GET / 200 in 34ms (next.js: 9ms, proxy.ts: 3ms, application-code: 22ms)
+ GET / 200 in 50ms (next.js: 7ms, proxy.ts: 5ms, application-code: 38ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 11ms (next.js: 6ms, application-code: 5ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 6ms (next.js: 1939µs, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 9ms (next.js: 3ms, application-code: 6ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 9ms (next.js: 3ms, application-code: 6ms)
+ GET /video 200 in 312ms (next.js: 60ms, proxy.ts: 30ms, application-code: 222ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
++                                 className="absolute top-[-28%] left-[-15%] w-[130%] h-[156%]"
+-                                 className="w-full h-full"
+-                                 id="player-_R_qd5esnelb_"
+                                >
++                                 <div id="player-_R_qd5esnelb_" className="w-full h-full">
+                              ...
+                          ...
+              ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at YouTubePlayer (components/youtube-player.tsx:212:21)
+    at SlideshowVideo (components/slideshow-video.tsx:16:17)
+    at SlideshowPageContent (components/slideshow-page-content.tsx:21:21)
+    at SlideshowPage (app/video/page.tsx:13:13)
+  210 |             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+  211 |                 <div className="absolute top-[-28%] left-[-15%] w-[130%] h-[156%]">
+> 212 |                     <div id={playerId} className="w-full h-full" />
+      |                     ^
+  213 |                 </div>
+  214 |             </div>
+  215 |
+ GET /login 200 in 66ms (next.js: 7ms, proxy.ts: 5ms, application-code: 54ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 27ms (next.js: 14ms, application-code: 13ms)
+ GET / 200 in 48ms (next.js: 6ms, proxy.ts: 8ms, application-code: 35ms)
+ GET / 200 in 90ms (next.js: 9ms, proxy.ts: 8ms, application-code: 73ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 13ms (next.js: 6ms, application-code: 7ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 10ms (next.js: 5ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 8ms (next.js: 4ms, application-code: 4ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 8ms (next.js: 4ms, application-code: 4ms)
+ GET /video 200 in 177ms (next.js: 21ms, proxy.ts: 4ms, application-code: 152ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
++                                 className="absolute top-[-30%] left-[-20%] w-[140%] h-[160%]"
+-                                 className="w-full h-full"
+-                                 id="player-_R_qd5esnelb_"
+                                >
++                                 <div id="player-_R_qd5esnelb_" className="w-full h-full">
+                              ...
+                          ...
+              ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at YouTubePlayer (components/youtube-player.tsx:212:21)
+    at SlideshowVideo (components/slideshow-video.tsx:16:17)
+    at SlideshowPageContent (components/slideshow-page-content.tsx:21:21)
+    at SlideshowPage (app/video/page.tsx:13:13)
+  210 |             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+  211 |                 <div className="absolute top-[-30%] left-[-20%] w-[140%] h-[160%]">
+> 212 |                     <div id={playerId} className="w-full h-full" />
+      |                     ^
+  213 |                 </div>
+  214 |             </div>
+  215 |
+ GET /login 200 in 61ms (next.js: 5ms, proxy.ts: 4ms, application-code: 52ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET / 200 in 37ms (next.js: 9ms, proxy.ts: 5ms, application-code: 23ms)
+ GET / 200 in 90ms (next.js: 12ms, proxy.ts: 7ms, application-code: 71ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 7ms (next.js: 3ms, application-code: 5ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 6ms (next.js: 1844µs, application-code: 4ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 10ms (next.js: 4ms, application-code: 6ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 10ms (next.js: 5ms, application-code: 6ms)
+ GET /video 200 in 283ms (next.js: 18ms, proxy.ts: 12ms, application-code: 253ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
++                                 className="absolute top-[-45%] left-[-25%] w-[150%] h-[190%]"
+-                                 className="w-full h-full"
+-                                 id="player-_R_qd5esnelb_"
+                                >
++                                 <div id="player-_R_qd5esnelb_" className="w-full h-full">
+                              ...
+                          ...
+              ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at YouTubePlayer (components/youtube-player.tsx:213:21)
+    at SlideshowVideo (components/slideshow-video.tsx:16:17)
+    at SlideshowPageContent (components/slideshow-page-content.tsx:21:21)
+    at SlideshowPage (app/video/page.tsx:13:13)
+  211 |             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+  212 |                 <div className="absolute top-[-45%] left-[-25%] w-[150%] h-[190%]">
+> 213 |                     <div id={playerId} className="w-full h-full" />
+      |                     ^
+  214 |                 </div>
+  215 |             </div>
+  216 |
+ GET /login 200 in 64ms (next.js: 4ms, proxy.ts: 6ms, application-code: 54ms)
+Received password: 2DSadowara
+Expected password: 2DSadowara
+Password length: 10
+Expected length: 10
+Match result: true
+ POST /api/auth 200 in 12ms (next.js: 2ms, application-code: 10ms)
+ GET / 200 in 40ms (next.js: 6ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 50ms (next.js: 11ms, proxy.ts: 3ms, application-code: 35ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 15ms (next.js: 3ms, application-code: 12ms)
+Reading from: /app/public/kai
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木浦　翔太.jpg',
+  '松尾　紀香.jpg',   '染川　凛.png',
+  '永野　乃愛.png',   '河野　天智.jpg',
+  '田口　瑞姫.png',   '甲斐　琉捺.jpg',
+  '甲斐　黄純.png',   '的場　勇都.png',
+  '盛田　可夢偉.png', '竹乃内　隼翔.jpg',
+  '築池　康平.png',   '谷口　夢生.jpg',
+  '高山　莞寧.png',   '黒木　瑛汰.png',
+  '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kai 200 in 7ms (next.js: 2ms, application-code: 5ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 9ms (next.js: 2ms, application-code: 7ms)
+Reading from: /app/public/kinoshita
+Files found: [
+  '中田　凜.jpg',     '内田　有喜亜.jpg',
+  '冨永　拓矢.png',   '冨永　望叶.jpg',
+  '前原　漸佑.jpg',   '加世田　湊.jpg',
+  '加藤　希空丸.png', '圖師　陽杜.png',
+  '塩月　瑠衣.jpg',   '安達　太陽.png',
+  '山内　侑大.png',   '山本　泰綺.png',
+  '岩田　康孝.jpg',   '德田　太祐_1.png',
+  '德田　太祐_2.png', '日高　琥太.png',
+  '星崎　桜史.png',   '曾我部　哲平.png',
+  '有村　涼雅.png',   '木下　優奈.png',
+  '木浦　翔太.jpg',   '松尾　紀香.jpg',
+  '染川　凛.png',     '永野　乃愛.png',
+  '河野　天智.jpg',   '田口　瑞姫.png',
+  '甲斐　琉捺.jpg',   '甲斐　黄純.png',
+  '的場　勇都.png',   '盛田　可夢偉.png',
+  '竹乃内　隼翔.jpg', '築池　康平.png',
+  '谷口　夢生.jpg',   '高山　莞寧.png',
+  '黒木　瑛汰.png',   '黒木　碧.jpg'
+]
+ GET /api/images?teacher=kinoshita 200 in 7ms (next.js: 3ms, application-code: 4ms)
+ GET /video 200 in 220ms (next.js: 34ms, proxy.ts: 8ms, application-code: 178ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SlideshowPage>
+      <Suspense fallback={{...}}>
+        ...
+          <main className="relative m...">
+            <SakuraPetals>
+            <div className="relative z-10">
+              <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.6, ...}}>
+                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <SlideshowVideo>
+                    <div className="max-w-4xl ...">
+                      <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>
+                        <div className="relative r..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <YouTubePlayer videoId="qTbJzGTnYA8">
+                            <div ref={{current:null}} className="relative g..." onMouseMove={function handleMouseMove} ...>
+                              <div
++                               className="absolute inset-0 pointer-events-none overflow-hidden bg-black"
+-                               className="absolute inset-0 pointer-events-none scale-[1.15] origin-center"
+                              >
+                                <div
++                                 className="absolute top-[-15%] left-[-10%] w-[120%] h-[130%]"
+-                                 className="w-full h-full"
+-                                 id="player-_R_qd5esnelb_"
+                                >
++                                 <div id="player-_R_qd5esnelb_" className="w-full h-full">
+                              ...
+                          ...
+              ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at YouTubePlayer (components/youtube-player.tsx:213:21)
+    at SlideshowVideo (components/slideshow-video.tsx:16:17)
+    at SlideshowPageContent (components/slideshow-page-content.tsx:21:21)
+    at SlideshowPage (app/video/page.tsx:13:13)
+  211 |             <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+  212 |                 <div className="absolute top-[-15%] left-[-10%] w-[120%] h-[130%]">
+> 213 |                     <div id={playerId} className="w-full h-full" />
+      |                     ^
+  214 |                 </div>
+  215 |             </div>
+  216 |
